@@ -87,7 +87,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     public IMessage GenerateCompliment(System.Random r)
     {
-        return new MessageImpl(ComplimentGenerator.GenerateCompliment(r));
+        return new MessageImpl(MessageGenerator.GenerateCompliment(r));
     }
 
     public IMessage GenerateSmallTalk(System.Random r, Interest interest)
@@ -129,7 +129,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     private IMessage GenerateAbortMessage(Random r)
     {
-        return new TestMessage("Sorry, I need to go wash my hair.");
+        return new MessageImpl(MessageGenerator.GenerateAbort(r));
     }
 
     public bool IsOver

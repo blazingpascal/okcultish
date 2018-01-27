@@ -16,8 +16,6 @@ namespace AssemblyCSharp
 		private String lastName;
 		private int cultConversionChance;
 		private Gender gender;
-
-		private static Random random = new Random();
 		 
 		private const int MIN_START_CONVERSION_CHANCE = 5;
 		private const int MAX_START_CONVERSION_CHANCE = 20;
@@ -30,19 +28,19 @@ namespace AssemblyCSharp
 			this.cultConversionChance = cultConversionChance;
 		}
 
-		public String getFirstName() {
+		public String GetFirstName() {
 			return firstName;
 		}
 
-		public String getFullName() {
+		public String GetFullName() {
 			return firstName + " " + lastName;
 		}
 
-		public Boolean tryToConvert() {
+		public Boolean TryToConvert(Random random) {
 			return random.Next(100) < cultConversionChance;
 		}
 
-		public int changeConversionChance(int delta) {
+		public int ChangeConversionChance(int delta) {
 			/**
 			 * Change the cultConversionChance by a delta, bounded to [0, 100]
 			 **/
@@ -52,7 +50,7 @@ namespace AssemblyCSharp
 			return cultConversionChance;
 		}
 
-		public static User userGenerator() {
+		public static User UserGenerator(Random random) {
 			Gender gender = random.Next (2) == 0 ? Gender.Male : Gender.Female;
 			return new User ((gender == Gender.Female ? femaleFirstNameSelector.getRandomItem() : maleFirstNameSelector.getRandomItem()),
 				lastNameSelector.getRandomItem (),

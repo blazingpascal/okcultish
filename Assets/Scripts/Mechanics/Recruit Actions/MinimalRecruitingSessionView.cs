@@ -1,10 +1,13 @@
-﻿using System;
+﻿using AssemblyCSharp;
+using System;
 using UnityEngine;
 
 public class MinimalRecruitingSessionView : MonoBehaviour
 {
 	public MinimalMessagingPlatformView platform;
-	IRecruitingSession session;
+    private System.Random r = new System.Random();
+
+    IRecruitingSession session;
 
 	void Awake()
 	{
@@ -14,14 +17,13 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 
 	void Start()
 	{
-		IUserProfile currentRecruitProfile = new TestUserProfile();
+        IUserProfile currentRecruitProfile = UserProfile.UserProfileGenerator(r) ;
 		IPlayerProfile playerProfile = new TestPlayerProfile();
 		session = new RecruitingSessionImpl(currentRecruitProfile, playerProfile, platform);
 	}
 
 	void Update()
 	{
-		System.Random r = new System.Random();
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
 			session.complimentRecruit(r);

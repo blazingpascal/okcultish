@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AssemblyCSharp;
+using System;
 
 public class RecruitingSessionImpl : IRecruitingSession
 {
@@ -82,8 +83,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public IMessage generateCompliment(System.Random r)
 	{
-		// TODO
-		return new TestMessage("Your nostrils are very progressive.");
+		return new MessageImpl(ComplimentGenerator.GenerateCompliment(r));
 	}
 
 	public IMessage generateSmallTalk(System.Random r, Interest interest)

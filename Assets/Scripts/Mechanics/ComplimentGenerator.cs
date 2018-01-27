@@ -14,7 +14,7 @@ namespace AssemblyCSharp
 			
 		}
 
-		public string generateCompliment(Random random) {
+		public static string GenerateCompliment(Random random) {
 			string adjective = adjectiveSelector.getRandomItem ();
 			string bodyPart = bodyPartSelector.getRandomItem ();
 

@@ -29,20 +29,20 @@ public class RecruitingSessionImpl : IRecruitingSession
 	{
 		IMessage msg = GenerateCompliment(r);
 		platform.AddPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
-		platform.addResponse(response, true);
+		IMessage response = currentRecruitProfile.GenerateComplimentResponse(r);
+		platform.AddResponse(response, true);
 		currentRecruitProfile.GetUser().ChangeConversionChance(COMPLIMENT_DELTA);
 
 	}
 
 	public void smallTalkRecruit(System.Random r)
 	{
-		Interest interest = playerProfile.getRandomInterest(r);
-		IMessage msg = generateSmallTalk(r, interest);
-		bool success = currentRecruitProfile.interestedIn(interest);
-		platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateSmallTalkResponse(r, success, interest);
-		platform.addResponse(response, success);
+		Interest interest = playerProfile.GetRandomInterest(r);
+		IMessage msg = GenerateSmallTalk(r, interest);
+		bool success = currentRecruitProfile.InterestedIn(interest);
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateSmallTalkResponse(r, success, interest);
+		platform.AddResponse(response, success);
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL);
 	}
 
@@ -51,10 +51,10 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.GetRandomInterest(r);
 		IMessage msg = GenerateCultMention(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
-		platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateCultMentionResponse(r, success, interest);
-		platform.addResponse(response, success);
+		bool success = currentRecruitProfile.InterestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateCultMentionResponse(r, success, interest);
+		platform.AddResponse(response, success);
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL);
 	}
 
@@ -63,10 +63,10 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.GetRandomInterest(r);
 		IMessage msg = GenerateCultHint(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
-        platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateCultHintResponse(r, success, interest);
-		platform.addResponse(response, success);
+		bool success = currentRecruitProfile.InterestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
+        platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateCultHintResponse(r, success, interest);
+		platform.AddResponse(response, success);
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL);
 	}
 
@@ -119,9 +119,17 @@ public class RecruitingSessionImpl : IRecruitingSession
 		return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
 	}
 
-	public void Abort()
+
+	public void Abort(Random r)
 	{
-		this.cultConversionChance = -1;
+		platform.AddPlayerMessage(GenerateAbortMessage(r));
+		platform.AddResponse(currentRecruitProfile.GenerateAbortResponse(r), false);
+		// this.cultConversionChance = -1;
+	}
+
+	private IMessage GenerateAbortMessage(Random r)
+	{
+		return new TestMessage("Sorry, I need to go wash my hair.");
 	}
 
 	public bool IsOver

@@ -1,19 +1,21 @@
-﻿using AssemblyCSharp;
-using System;
+﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MinimalRecruitingSessionView : MonoBehaviour
 {
 	public MinimalMessagingPlatformView platform;
+	public Text scoreText;
     private System.Random r = new System.Random();
-
     IRecruitingSession session;
+	public Text isOverText;
+	public Text isRecruitedTest;
+	public GameManager gameManager;
 
 	void Start()
 	{
         IUserProfile currentRecruitProfile = UserProfile.UserProfileGenerator(r) ;
 		IPlayerProfile playerProfile = new TestPlayerProfile();
-		IGameManager gameManager = null;
 		session = new RecruitingSessionImpl(currentRecruitProfile, playerProfile, platform, gameManager);
 	}
 
@@ -39,6 +41,13 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 		{
 			session.askToJoinCult(r);
 		}
+		if (Input.GetKeyDown(KeyCode.A))
+		{
+			session.Abort(r);
+		}
+		this.scoreText.text = session.CultConversionChance.ToString();
+		this.isOverText.text = session.IsOver.ToString();
+		this.isRecruitedTest.text = session.IsRecruited.ToString();
 	}
 
 	private class TestPlayerProfile : IPlayerProfile
@@ -57,8 +66,15 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 
 	private class TestUserProfile : IUserProfile
 	{
+        User user = User.UserGenerator(new System.Random());
 		Interest[] interests = { new Interest("Athletics", "Watching Sports"), new Interest("Entertainment", "Art") };
-		public IMessage generateComplimentResponse(System.Random r)
+
+		public IMessage GenerateAbortResponse(System.Random r)
+		{
+			return new TestMessage("uh ok");
+		}
+
+		public IMessage GenerateComplimentResponse(System.Random r)
 		{
 			return new TestMessage("Oh my gawsh thx ;)");
 		}
@@ -99,7 +115,12 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			return new TestMessage("Eh, I'm not really interested in " + interest);
 		}
 
-		public bool InterestedIn(Interest interest)
+        public IUser GetUser()
+        {
+            return user;
+        }
+
+        public bool InterestedIn(Interest interest)
 		{
 			foreach(Interest i in interests)
 			{

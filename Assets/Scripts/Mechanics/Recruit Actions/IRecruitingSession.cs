@@ -18,7 +18,7 @@ interface IRecruitingSession
 	void SetMessagingPlatform(IMessagingPlatform p);
 	bool IsOver { get; }
 	bool IsRecruited { get; }
-	void Abort();
+	void Abort(Random r);
 	int CultConversionChance { get; }
 }
 

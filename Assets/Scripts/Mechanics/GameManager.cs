@@ -1,73 +1,75 @@
 ﻿using System;
 using UnityEngine;
 
-namespace AssemblyCSharp
+public class GameManager : MonoBehaviour, IGameManager
 {
-    public class GameManager : MonoBehaviour
-    {
-        private const int QUOTA_INCREASE_PER_ROUND = 1;
-        private const long MS_PER_ROUND = 30000;
-        private const int MS_INCREASE_PER_ROUND = 0;
+	private const int QUOTA_INCREASE_PER_ROUND = 1;
+	private const long MS_PER_ROUND = 30000;
+	private const int MS_INCREASE_PER_ROUND = 0;
 
-        private UserProfile currentMatch;
-        public int TotalScore { get; private set; }
-        public int ScoreForRound { get; private set; }
-        public int Quota { get; private set; }
-        public long TimeRemaining { get; private set; }
-        public int CurrentRound { get; private set; }
-        public bool HasLost { get; private set; }
+	private UserProfile currentMatch;
+	public int TotalScore { get; private set; }
+	public int ScoreForRound { get; private set; }
+	public int Quota { get; private set; }
+	public long TimeRemaining { get; private set; }
+	public int CurrentRound { get; private set; }
+	public bool HasLost { get; private set; }
 
-        public GameManager()
-        {
-        
-        }
+	public GameManager()
+	{
 
-        void Start()
-        {
-            CurrentRound = 0;
-            ScoreForRound = 0;
-            InitNewRound();
-            HasLost = false;
-        }
+	}
 
-        void Update()
-        {
-            TimeRemaining -= (long)(1000 * Time.deltaTime);
-            if (TimeRemaining <= 0)
-            {
-                HasLost = ScoreForRound >= Quota;
-            }
-        }
+	void Start()
+	{
+		CurrentRound = 0;
+		ScoreForRound = 0;
+		InitNewRound();
+		HasLost = false;
+	}
 
-        public void SetCurrentMatch(UserProfile match)
-        {
-            currentMatch = match;
-        }
+	void Update()
+	{
+		TimeRemaining -= (long)(1000 * Time.deltaTime);
+		if (TimeRemaining <= 0)
+		{
+			HasLost = ScoreForRound >= Quota;
+		}
+	}
 
-        public void IncrementScore()
-        {
-            ScoreForRound++;
-        }
+	public void SetCurrentMatch(UserProfile match)
+	{
+		currentMatch = match;
+	}
 
-        public bool TryToRecruit()
-        {
-            bool success = currentMatch.User.tryToConvert();
-            if (success)
-            {
-                ScoreForRound++;
-            }
-            currentMatch = null;
-            return success;
-        }
+	public void IncrementScore()
+	{
+		ScoreForRound++;
+	}
 
-        private void InitNewRound()
-        {
-            CurrentRound++;
-            TotalScore += ScoreForRound;
-            ScoreForRound = 0;
-            Quota += QUOTA_INCREASE_PER_ROUND;
-            TimeRemaining = MS_PER_ROUND + MS_INCREASE_PER_ROUND * CurrentRound;
+	public bool TryToRecruit(System.Random random)
+	{
+		bool success = random.Next(100) < currentMatch.GetUser().GetConversionChance();
+		if (success)
+		{
+			ScoreForRound++;
+		}
+		currentMatch = null;
+		return success;
+	}
 
-        }
-    }
+	private void InitNewRound()
+	{
+		CurrentRound++;
+		TotalScore += ScoreForRound;
+		ScoreForRound = 0;
+		Quota += QUOTA_INCREASE_PER_ROUND;
+		TimeRemaining = MS_PER_ROUND + MS_INCREASE_PER_ROUND * CurrentRound;
+
+	}
+
+	public void IncrementRecruitCount()
+	{
+		this.IncrementScore();
+	}
 }

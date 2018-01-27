@@ -1,15 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class MinimalRecruitingSessionView : MonoBehaviour
 {
 	public MinimalMessagingPlatformView platform;
+	public Text scoreText;
 	IRecruitingSession session;
+	public Text isOverText;
+	public Text isRecruitedTest;
+	public GameManager gameManager;
 
 	void Start()
 	{
 		IUserProfile currentRecruitProfile = new TestUserProfile();
 		IPlayerProfile playerProfile = new TestPlayerProfile();
-		IGameManager gameManager = null;
 		session = new RecruitingSessionImpl(currentRecruitProfile, playerProfile, platform, gameManager);
 	}
 
@@ -36,6 +41,13 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 		{
 			session.askToJoinCult(r);
 		}
+		if (Input.GetKeyDown(KeyCode.A))
+		{
+			session.Abort(r);
+		}
+		this.scoreText.text = session.CultConversionChance.ToString();
+		this.isOverText.text = session.IsOver.ToString();
+		this.isRecruitedTest.text = session.IsRecruited.ToString();
 	}
 
 	private class TestPlayerProfile : IPlayerProfile
@@ -55,7 +67,13 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 	private class TestUserProfile : IUserProfile
 	{
 		Interest[] interests = { new Interest("Athletics", "Watching Sports"), new Interest("Entertainment", "Art") };
-		public IMessage generateComplimentResponse(System.Random r)
+
+		public IMessage GenerateAbortResponse(System.Random r)
+		{
+			return new TestMessage("uh ok");
+		}
+
+		public IMessage GenerateComplimentResponse(System.Random r)
 		{
 			return new TestMessage("Oh my gawsh thx ;)");
 		}

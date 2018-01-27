@@ -29,7 +29,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 	{
 		IMessage msg = GenerateCompliment(r);
 		platform.AddPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
+		IMessage response = currentRecruitProfile.GenerateComplimentResponse(r);
 		platform.AddResponse(response, true);
 		cultConversionChance += COMPLIMENT_DELTA;
 
@@ -120,9 +120,17 @@ public class RecruitingSessionImpl : IRecruitingSession
 		return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
 	}
 
-	public void Abort()
+
+	public void Abort(Random r)
 	{
+		platform.AddPlayerMessage(GenerateAbortMessage(r));
+		platform.AddResponse(currentRecruitProfile.GenerateAbortResponse(r), false);
 		this.cultConversionChance = -1;
+	}
+
+	private IMessage GenerateAbortMessage(Random r)
+	{
+		return new TestMessage("Sorry, I need to go wash my hair.");
 	}
 
 	public bool IsOver

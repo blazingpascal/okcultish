@@ -1,11 +1,8 @@
 ﻿using System;
 
-namespace AssemblyCSharp
+public enum Gender
 {
-	public enum Gender
-	{
-		Female,
-		Male
-	}
+	Female,
+	Male
 }
 

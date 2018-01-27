@@ -19,5 +19,6 @@ interface IRecruitingSession
 	bool IsOver { get; }
 	bool IsRecruited { get; }
 	void abort();
+	int CultConversionChance { get; }
 }
 

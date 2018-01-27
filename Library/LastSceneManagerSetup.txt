@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/Scenes/MVP/TestRecruit.unity
+  isLoaded: 1
+  isActive: 1

@@ -1,22 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MinimalRecruitingSessionView : MonoBehaviour
 {
 	public MinimalMessagingPlatformView platform;
 	IRecruitingSession session;
 
-	void Awake()
-	{
-
-
-	}
-
 	void Start()
 	{
 		IUserProfile currentRecruitProfile = new TestUserProfile();
 		IPlayerProfile playerProfile = new TestPlayerProfile();
-		session = new RecruitingSessionImpl(currentRecruitProfile, playerProfile, platform);
+		IGameManager gameManager = null;
+		session = new RecruitingSessionImpl(currentRecruitProfile, playerProfile, platform, gameManager);
 	}
 
 	void Update()
@@ -51,16 +45,16 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			int roll = r.Next(100);
 			if(roll < 50)
 			{
-				return Interest.Athletics;
+				return new Interest("Athletics", "Watching Sports");
 			}
-			return Interest.Religion;
+			return new Interest("Religion", "Scientology");
 
 		}
 	}
 
 	private class TestUserProfile : IUserProfile
 	{
-		Interest[] interests = { Interest.Athletics, Interest.Entertainment };
+		Interest[] interests = { new Interest("Athletics", "Watching Sports"), new Interest("Entertainment", "Art") };
 		public IMessage generateComplimentResponse(System.Random r)
 		{
 			return new TestMessage("Oh my gawsh thx ;)");

@@ -2,7 +2,7 @@
 
 namespace AssemblyCSharp
 {
-	public class User
+	public class User : IUser
 	{
 		private static String FEMALE_FIRST_NAME_FILE = @"./Assets/Resources/lists/female-names.txt";
 		private static String MALE_FIRST_NAME_FILE = @"./Assets/Resources/lists/male-names.txt";
@@ -40,14 +40,18 @@ namespace AssemblyCSharp
 			return random.Next(100) < cultConversionChance;
 		}
 
-		public int ChangeConversionChance(int delta) {
+        public int GetConversionChance()
+        {
+            return cultConversionChance;
+        }
+
+		public void ChangeConversionChance(int delta) {
 			/**
 			 * Change the cultConversionChance by a delta, bounded to [0, 100]
 			 **/
 			cultConversionChance += delta;
 			cultConversionChance = Math.Min (100, cultConversionChance);
 			cultConversionChance = Math.Max (0, cultConversionChance);
-			return cultConversionChance;
 		}
 
 		public static User UserGenerator(Random random) {

@@ -49,6 +49,11 @@ namespace AssemblyCSharp
             return interests.Contains(interest);
         }
 
+        public IUser GetUser()
+        {
+            return user;
+        }
+
         public static UserProfile UserProfileGenerator(Random random)
         {
             int interestCount = 3;

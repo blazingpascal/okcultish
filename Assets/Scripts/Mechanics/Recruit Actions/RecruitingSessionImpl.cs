@@ -14,7 +14,6 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	private IUserProfile currentRecruitProfile;
 	private IPlayerProfile playerProfile;
-	private int currentInterest;
 	private IMessagingPlatform platform;
 	private bool isOver = false;
 
@@ -31,7 +30,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
 		platform.addResponse(response, true);
-		currentInterest += COMPLIMENT_DELTA;
+		currentRecruitProfile.GetUser().ChangeConversionChance(COMPLIMENT_DELTA);
 
 	}
 
@@ -43,7 +42,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateSmallTalkResponse(r, success, interest);
 		platform.addResponse(response, success);
-		currentInterest += success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL;
+        currentRecruitProfile.GetUser().ChangeConversionChance(success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL);
 	}
 
 	public void mentionCultToRecruit(Random r)
@@ -51,11 +50,11 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.getRandomInterest(r);
 		IMessage msg = generateCultMention(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentInterest;
+		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateCultMentionResponse(r, success, interest);
 		platform.addResponse(response, success);
-		currentInterest += success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL;
+        currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL);
 	}
 
 	public void hintAtCultToRecruit(System.Random r)
@@ -63,22 +62,22 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.getRandomInterest(r);
 		IMessage msg = generateCultHint(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentInterest;
-		platform.addPlayerMessage(msg);
+		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
+        platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateCultHintResponse(r, success, interest);
 		platform.addResponse(response, success);
-		currentInterest += success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL;
+        currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL);
 	}
 
 	public void askToJoinCult(System.Random r)
 	{
 		IMessage msg = generateJoinCultMessage(r);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = roll < currentInterest;
-		platform.addPlayerMessage(msg);
+		bool success = roll < currentRecruitProfile.GetUser().GetConversionChance();
+        platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateJoinCultResponse(r, success);
 		platform.addResponse(response, success);
-		this.currentInterest = -1;
+		// this.currentInterest = -1;
 	}
 
 	public IMessage generateCompliment(System.Random r)
@@ -122,14 +121,14 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public bool IsOver
 	{
-		get { return this.currentInterest < 0; }
+		get { return this.currentRecruitProfile.GetUser().GetConversionChance() < 0; }
 	}
 
 	public bool IsRecruited
 	{
 		get
 		{
-			return this.currentInterest > INTEREST_MAX;
+			return this.currentRecruitProfile.GetUser().GetConversionChance() > INTEREST_MAX;
 		}
 	}
 }

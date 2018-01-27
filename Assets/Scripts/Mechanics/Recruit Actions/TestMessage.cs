@@ -7,7 +7,7 @@
 		this.msg = msg;
 	}
 
-	public string getMessage()
+	public string GetMessage()
 	{
 		return msg;
 	}

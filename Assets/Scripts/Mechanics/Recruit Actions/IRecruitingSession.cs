@@ -10,14 +10,15 @@ interface IRecruitingSession
 	void mentionCultToRecruit(Random r);
 	void hintAtCultToRecruit(Random r);
 	void askToJoinCult(Random r);
-	IMessage generateCompliment(Random r);
-	IMessage generateSmallTalk(Random r, Interest i);
-	IMessage generateCultMention(Random r, Interest i);
-	IMessage generateCultHint(Random r, Interest i);
-	IMessage generateJoinCultMessage(Random r);
-	void setMessagingPlatform(IMessagingPlatform p);
+	IMessage GenerateCompliment(Random r);
+	IMessage GenerateSmallTalk(Random r, Interest i);
+	IMessage GenerateCultMention(Random r, Interest i);
+	IMessage GenerateCultHint(Random r, Interest i);
+	IMessage GenerateJoinCultMessage(Random r);
+	void SetMessagingPlatform(IMessagingPlatform p);
 	bool IsOver { get; }
 	bool IsRecruited { get; }
-	void abort();
+	void Abort();
+	int CultConversionChance { get; }
 }
 

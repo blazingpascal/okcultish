@@ -1,5 +1,5 @@
 ﻿public interface IMessagingPlatform
 {
-	void addPlayerMessage(IMessage msg);
-	void addResponse(IMessage msg, bool success);
+	void AddPlayerMessage(IMessage msg);
+	void AddResponse(IMessage msg, bool success);
 }

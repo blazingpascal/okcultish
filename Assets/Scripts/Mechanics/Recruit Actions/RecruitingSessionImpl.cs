@@ -15,19 +15,20 @@ public class RecruitingSessionImpl : IRecruitingSession
 	private IUserProfile currentRecruitProfile;
 	private IPlayerProfile playerProfile;
 	private IMessagingPlatform platform;
-	private bool isOver = false;
+	private IGameManager gameManager;
 
-	public RecruitingSessionImpl(IUserProfile currentRecruitProfile, IPlayerProfile playerProfile, IMessagingPlatform platform)
+	public RecruitingSessionImpl(IUserProfile currentRecruitProfile, IPlayerProfile playerProfile, IMessagingPlatform platform, IGameManager manager)
 	{
 		this.currentRecruitProfile = currentRecruitProfile;
 		this.playerProfile = playerProfile;
 		this.platform = platform;
+		this.gameManager = manager;
 	}
 
 	public void complimentRecruit(System.Random r)
 	{
-		IMessage msg = generateCompliment(r);
-		platform.addPlayerMessage(msg);
+		IMessage msg = GenerateCompliment(r);
+		platform.AddPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
 		platform.addResponse(response, true);
 		currentRecruitProfile.GetUser().ChangeConversionChance(COMPLIMENT_DELTA);
@@ -47,8 +48,8 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public void mentionCultToRecruit(Random r)
 	{
-		Interest interest = playerProfile.getRandomInterest(r);
-		IMessage msg = generateCultMention(r, interest);
+		Interest interest = playerProfile.GetRandomInterest(r);
+		IMessage msg = GenerateCultMention(r, interest);
 		int roll = r.Next(INTEREST_MAX);
 		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
 		platform.addPlayerMessage(msg);
@@ -59,8 +60,8 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public void hintAtCultToRecruit(System.Random r)
 	{
-		Interest interest = playerProfile.getRandomInterest(r);
-		IMessage msg = generateCultHint(r, interest);
+		Interest interest = playerProfile.GetRandomInterest(r);
+		IMessage msg = GenerateCultHint(r, interest);
 		int roll = r.Next(INTEREST_MAX);
 		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentRecruitProfile.GetUser().GetConversionChance();
         platform.addPlayerMessage(msg);
@@ -71,52 +72,56 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public void askToJoinCult(System.Random r)
 	{
-		IMessage msg = generateJoinCultMessage(r);
+		IMessage msg = GenerateJoinCultMessage(r);
 		int roll = r.Next(INTEREST_MAX);
 		bool success = roll < currentRecruitProfile.GetUser().GetConversionChance();
-        platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateJoinCultResponse(r, success);
-		platform.addResponse(response, success);
-		// this.currentInterest = -1;
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateJoinCultResponse(r, success);
+		platform.AddResponse(response, success);
+		if (success)
+		{
+			this.gameManager.IncrementRecruitCount();
+		}
+		//this.cultConversionChance = -1;
 	}
 
-	public IMessage generateCompliment(System.Random r)
+	public IMessage GenerateCompliment(System.Random r)
 	{
 		return new MessageImpl(ComplimentGenerator.GenerateCompliment(r));
 	}
 
-	public IMessage generateSmallTalk(System.Random r, Interest interest)
+	public IMessage GenerateSmallTalk(System.Random r, Interest interest)
 	{
 		// TODO
 		return new TestMessage("How do you feel about " + interest.ToString());
 	}
 
-	public IMessage generateCultMention(System.Random r, Interest interest)
+	public IMessage GenerateCultMention(System.Random r, Interest interest)
 	{
 		// TODO
 		return new TestMessage("Do you think you could win a cage match with Jesus?");
 	}
 
-	public IMessage generateJoinCultMessage(System.Random r)
+	public IMessage GenerateJoinCultMessage(System.Random r)
 	{
 		// TODO
 		return new TestMessage("Hey, wanna join my cult?");
 	}
 
-	public void setMessagingPlatform(IMessagingPlatform p)
+	public void SetMessagingPlatform(IMessagingPlatform p)
 	{
 		this.platform = p;
 	}
 
-	public IMessage generateCultHint(Random r, Interest i)
+	public IMessage GenerateCultHint(Random r, Interest i)
 	{
 		// TODO
 		return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
 	}
 
-	public void abort()
+	public void Abort()
 	{
-		this.isOver = true;
+		this.cultConversionChance = -1;
 	}
 
 	public bool IsOver
@@ -130,5 +135,10 @@ public class RecruitingSessionImpl : IRecruitingSession
 		{
 			return this.currentRecruitProfile.GetUser().GetConversionChance() > INTEREST_MAX;
 		}
+	}
+
+	public int CultConversionChance
+	{
+		get { return this.currentRecruitProfile.GetUser().GetConversionChance(); }
 	}
 }

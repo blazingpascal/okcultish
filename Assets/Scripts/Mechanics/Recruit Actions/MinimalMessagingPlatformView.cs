@@ -1,20 +1,19 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MinimalMessagingPlatformView : MonoBehaviour, IMessagingPlatform
 {
-	public Text playerResponse;
 	public Text dateResponse;
+	public Text playerResponse;
 
-	public void addPlayerMessage(IMessage msg)
+	public void AddPlayerMessage(IMessage msg)
 	{
-		playerResponse.text = msg.getMessage();
+		playerResponse.text = msg.GetMessage();
 	}
 
-	public void addResponse(IMessage msg, bool success)
+	public void AddResponse(IMessage msg, bool success)
 	{
-		dateResponse.text = msg.getMessage();
+		dateResponse.text = msg.GetMessage();
 		dateResponse.color = success ? Color.green : Color.red;
 	}
 }

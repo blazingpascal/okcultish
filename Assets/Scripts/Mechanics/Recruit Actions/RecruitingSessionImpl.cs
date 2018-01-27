@@ -132,6 +132,11 @@ public class RecruitingSessionImpl : IRecruitingSession
 		return new TestMessage("Sorry, I need to go wash my hair.");
 	}
 
+	private IMessage GenerateAbortMessage(Random r)
+	{
+		return new TestMessage("Sorry, I need to go wash my hair.");
+	}
+
 	public bool IsOver
 	{
 		get { return this.currentRecruitProfile.GetUser().GetConversionChance() < 0; }

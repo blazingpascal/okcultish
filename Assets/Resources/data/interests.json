@@ -14,26 +14,31 @@
 						],
 					"Negative" : 
 						[
+						"That sounds dangerous. I don't trust automated law enforcement."
 						]
 					},
 				"A quantum computing scientist was named Australian of the Year. What a time to be alive.": 
 					{
 					"Positive" : 
 						[
+						"Nice to see scientists getting recognition!"
 						],
 					"Negative" : 
 						[
+						"Should have been Hugh Jackman."
 						]
 					},
 				"Are you a supporter of enlightenment philosophers?" : 
 					{
 					"Positive" : 
 						[
+						"Voltaire and Locke are my jam."
 						],
 					"Negative" : 
 						[
+						"You mean those secular idealists? No thanks."
 						]
-					},
+					}
 				},
 			"CultHint" : 
 				{
@@ -41,9 +46,11 @@
 					{
 					"Positive" : 
 						[
+						"Hmmm. I would say a balance of both. Use your past to learn from your mistakes and your future to inspire you." 
 						],
 					"Negative" : 
 						[
+						"Woah, that's a little serious isn't it?"
 						]
 					}
 				},
@@ -61,7 +68,8 @@
 				}
 		}
 	},
-	"Politics" : {
+	"Politics" : 
+		{
 		"Anarchosyndicalist" : 
 			{
 			"SmallTalk" : 
@@ -85,9 +93,11 @@
 					{
 					"Positive" : 
 						[
+						"Seems sensible to me. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony."
 						],
 					"Negative" : 
 						[
+						"Bloody peasant!"
 						]
 					}
 				}
@@ -119,7 +129,7 @@
 					"Negative" : 
 						[
 						]
-					},
+					}
 				}
 		},
 		"Communism" : 
@@ -134,7 +144,7 @@
 					"Negative" : 
 						[
 						]
-					},
+					}
 				},
 			"CultHint" : 
 				{
@@ -184,6 +194,7 @@
 					{
 					"Positive" : 
 						[
+						"We're winning so many things. Scoring all the touchdowns and making all the runs. Goals too."
 						],
 					"Negative" : 
 						[
@@ -193,18 +204,22 @@
 					{
 					"Positive" : 
 						[
+						"AAaaaaaahhha lasjjasdljasdjoijalskj sfdj ojsdflkj lksdfa *flips car*"
 						],
 					"Negative" : 
 						[
+						
 						]
 					},
 				"If you want to see some sick bouldering you should check out La Sportiva's Legends Only." : 
 					{
 					"Positive" : 
 						[
+						"Yeeeeeeesss. Shauna Coxsey, Mélissa Le Nevé, Petra Klingler all in one competition? Totally worth watching 3 hours straight."
 						],
 					"Negative" : 
 						[
+						"Is it even rock climbing if they're climbing indoors?"
 						]
 					}
 				},
@@ -258,7 +273,7 @@
 			{
 			"SmallTalk" : 
 				{
-				"You ever try the One-Punch Man workout? 100 push-ups, 100 sit-ups, 100 squats, and a 10k. EVERY DAY. Works wonders.": 
+				"You ever try the One-Punch Man workout? 100 push-ups, 100 sit-ups, 100 squats, and a 10k. EVERY. DAY. Works wonders.": 
 					{
 					"Positive" : 
 						[
@@ -429,7 +444,7 @@
 						],
 					"Negative" : 
 						[
-						"Umm.. I'm not really into multiple partners..."
+						"Umm.. Poly-what? I'm not really into multiple partners..."
 						]
 					}
 				},
@@ -467,7 +482,8 @@
 					}
 				}
 		},
-		"Movies" : {
+		"Movies" : 
+			{
 			"SmallTalk" : 
 				{
 				"Did you hear about that Bollywood movie, Padmaavat? Apparently it sparked a bunch of protests. Supposed to be a good movie though.": 
@@ -546,14 +562,14 @@
 					{
 					"Positive" : 
 						[
-						"It was super cool! You should go back and listen to the soundtrack to Paprika while viewing the art. Really pairs well together."
+						"It was super cool! You should go back and listen to the soundtrack of Paprika while viewing the art. Really pairs well together."
 						],
 					"Negative" : 
 						[
 						"It was a bit too out there for me.",
 						"Ugh museums aren't my thing. You walk around for hours and have to be quiet the whole time."
 						]
-					},
+					}
 				},
 			"CultHint" : 
 				{
@@ -605,6 +621,7 @@
 			"CultMention" : 
 				{
 				}
+			}
 		}
 	}
 }

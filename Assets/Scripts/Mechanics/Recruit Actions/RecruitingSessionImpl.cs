@@ -13,15 +13,16 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	private IUserProfile currentRecruitProfile;
 	private IPlayerProfile playerProfile;
-	private int currentInterest;
+	private int cultConversionChance;
 	private IMessagingPlatform platform;
-	private bool isOver = false;
+	private IGameManager gameManager;
 
-	public RecruitingSessionImpl(IUserProfile currentRecruitProfile, IPlayerProfile playerProfile, IMessagingPlatform platform)
+	public RecruitingSessionImpl(IUserProfile currentRecruitProfile, IPlayerProfile playerProfile, IMessagingPlatform platform, IGameManager manager)
 	{
 		this.currentRecruitProfile = currentRecruitProfile;
 		this.playerProfile = playerProfile;
 		this.platform = platform;
+		this.gameManager = manager;
 	}
 
 	public void complimentRecruit(System.Random r)
@@ -30,7 +31,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
 		platform.addResponse(response, true);
-		currentInterest += COMPLIMENT_DELTA;
+		cultConversionChance += COMPLIMENT_DELTA;
 
 	}
 
@@ -42,7 +43,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateSmallTalkResponse(r, success, interest);
 		platform.addResponse(response, success);
-		currentInterest += success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL;
+		cultConversionChance += success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL;
 	}
 
 	public void mentionCultToRecruit(Random r)
@@ -50,11 +51,11 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.getRandomInterest(r);
 		IMessage msg = generateCultMention(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentInterest;
+		bool success = currentRecruitProfile.interestedIn(interest) && roll < cultConversionChance;
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateCultMentionResponse(r, success, interest);
 		platform.addResponse(response, success);
-		currentInterest += success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL;
+		cultConversionChance += success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL;
 	}
 
 	public void hintAtCultToRecruit(System.Random r)
@@ -62,22 +63,26 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.getRandomInterest(r);
 		IMessage msg = generateCultHint(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentInterest;
+		bool success = currentRecruitProfile.interestedIn(interest) && roll < cultConversionChance;
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateCultHintResponse(r, success, interest);
 		platform.addResponse(response, success);
-		currentInterest += success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL;
+		cultConversionChance += success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL;
 	}
 
 	public void askToJoinCult(System.Random r)
 	{
 		IMessage msg = generateJoinCultMessage(r);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = roll < currentInterest;
+		bool success = roll < cultConversionChance;
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateJoinCultResponse(r, success);
 		platform.addResponse(response, success);
-		this.currentInterest = -1;
+		if (success)
+		{
+			this.gameManager.incrementRecruitCount();
+		}
+		this.cultConversionChance = -1;
 	}
 
 	public IMessage generateCompliment(System.Random r)
@@ -117,19 +122,24 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public void abort()
 	{
-		this.isOver = true;
+		this.cultConversionChance = -1;
 	}
 
 	public bool IsOver
 	{
-		get { return this.currentInterest < 0; }
+		get { return this.cultConversionChance < 0; }
 	}
 
 	public bool IsRecruited
 	{
 		get
 		{
-			return this.currentInterest > INTEREST_MAX;
+			return this.cultConversionChance > INTEREST_MAX;
 		}
+	}
+
+	public int CultConversionChance
+	{
+		get { return this.cultConversionChance; }
 	}
 }

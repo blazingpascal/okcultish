@@ -182,6 +182,15 @@
 			{
 			"SmallTalk" : 
 				{
+				"Things would be a lot simpler if we only had a single ruler to make all decisions." : 
+					{
+					"Positive" :
+						[
+						],
+					 "Negative" : 
+					 	[
+					 	]
+					}
 				},
 			"CultHint" : 
 				{
@@ -225,7 +234,7 @@
 						],
 					"Negative" : 
 						[
-						""
+						"I really don't care that much about sportsball."
 						]
 					},
 				"If you want to see some sick bouldering you should check out La Sportiva's Legends Only." : 
@@ -267,9 +276,11 @@
 					{
 					"Positive" : 
 						[
+						"Definitely! I'd love to learn something new."
 						],
 					"Negative" : 
 						[
+						"Curling? Like, sliding stones on ice and sweeping really fast? No thanks."
 						]
 					},
 				"Do you think you could win in a cage match with a god?" : 
@@ -511,6 +522,7 @@
 						],
 					"Negative" : 
 						[
+						"I don't really like watching movies in other languages."
 						]
 					},
 				"Favorite Marvel film. Go." : 
@@ -530,9 +542,11 @@
 					{
 					"Positive" : 
 						[
+						"I was really hoping the Shape of Water would get Best Motion Picture."
 						],
 					"Negative" : 
 						[
+						"I didn't really watch it..."
 						]
 					}
 				},
@@ -542,6 +556,7 @@
 					{
 					"Positive" : 
 						[
+						"I'm a big fan of The Village. Such a twist."
 						],
 					"Negative" : 
 						[
@@ -552,18 +567,22 @@
 					{
 					"Positive" : 
 						[
+						"Tom Cruise. He knows the truth."
 						],
 					"Negative" : 
 						[
+						"Um, what? Shunned mission? What are you talking about."
 						]
 					},
 				"If art is the reflection of the soul, then what does yours show? Are you really on the right path?" :	
 					{
 					"Positive" : 
 						[
+						"I may not be on the right path now, but I'll follow if you show me the way."
 						],
 					"Negative" : 
 						[
+						"I think my actions speak louder than your art."
 						]
 					}
 				},
@@ -620,6 +639,7 @@
 						],
 					"Negative" : 
 						[
+						"I'd rather be doing things outside than read a book."
 						]
 					}
 				},

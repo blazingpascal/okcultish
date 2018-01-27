@@ -8,10 +8,9 @@ public class TestRunner : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		User user1 = User.userGenerator ();
-		ComplimentGenerator cg = new ComplimentGenerator ();
+		User user1 = User.UserGenerator (random);
 		for (int i = 0; i < 10; i++) {
-			print (cg.generateCompliment (random));
+			print (ComplimentGenerator.GenerateCompliment (random));
 		}
 		print ("HELLO");
 	}

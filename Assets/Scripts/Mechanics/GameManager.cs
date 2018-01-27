@@ -47,9 +47,9 @@ public class GameManager : MonoBehaviour, IGameManager
 		ScoreForRound++;
 	}
 
-	public bool TryToRecruit()
+	public bool TryToRecruit(System.Random random)
 	{
-		bool success = currentMatch.User.tryToConvert();
+		bool success = random.Next(100) < currentMatch.GetUser().GetConversionChance();
 		if (success)
 		{
 			ScoreForRound++;

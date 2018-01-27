@@ -9,4 +9,5 @@ public interface IUserProfile
 	IMessage GenerateCultHintResponse(Random r, bool success, Interest interest);
 	IMessage GenerateJoinCultResponse(Random r, bool success);
 	IMessage GenerateAbortResponse(Random r);
+    IUser GetUser();
 }

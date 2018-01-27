@@ -1,227 +1,606 @@
-{"Interests" : {
-	"Academics" : {
-		"Category" : {
+{"Interests" : 
+	{
+	"Academics" : 
+		{
+		"Category" : 
+			{
 			"SmallTalk" : 
 				{
+				"Have you heard that Ford has created an autonomous police car that can issue tickets?" : 
+					{
+					"Positive" : 
+						[
+						"Sounds like Robo-cop waiting to happen haha"
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"A quantum computing scientist was named Australian of the Year. What a time to be alive.": 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"Are you a supporter of enlightenment philosophers?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
 				},
 			"CultHint" : 
 				{
-				"A conjecture to ponder: Should one come to the crossroads of life, would it be wiser to look back to experience or look ahead to possibility?" :
+				"A conjecture to ponder: Should one come to the crossroads of life, would it be wiser to look back to experience or look ahead to possibility?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
+				"As an esteemed member of the community, I work as a outsourcer for a union of fellow academics, aimed at the dissemination of important knowledge and the containment of the sensitive and dangerous." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				}
 		}
-	},
-	"Religion" : {
-		"Lovecraftian" : {
-			"SmallTalk" : 
-				{
-				},
-			"CultHint" : 
-				{
-				},
-			"CultMention" : 
-				{
-				}
-		},
-		"Christian" : {
-			"SmallTalk" : 
-				{
-				},
-			"CultHint" : 
-				{
-				},
-			"CultMention" : 
-				{
-				}
-		}
-		
-		
 	},
 	"Politics" : {
-		"Anarchosyndicalist" : {
+		"Anarchosyndicalist" : 
+			{
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
-				"If you were stood at the gates of heaven, with what would you convince the angels to admit you to their ranks as you properly deserve?" :
+				"If you were stood at the gates of heaven, with what would you convince the angels to admit you to their ranks as you properly deserve?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
-				"I'm part of an anarchosyndicalist commune. We take it in turns to act as a sort of executive officer for the week. But all the decision of that officer have to be ratified at a special biweekly meeting, by a simple majority in the case of purely internal affairs,  but by a two-thirds majority in the case of more pressing matters." :
+				"I'm part of an anarchosyndicalist commune. We take it in turns to act as a sort of executive officer for the week. But all the decision of that officer have to be ratified at a special biweekly meeting, by a simple majority in the case of purely internal affairs,  but by a two-thirds majority in the case of more pressing matters." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				}
 		},
-		"Libertarian" : {
+		"Libertarian" : 
+			{
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
-				"So. Crazy question. Do you think the gods would approve of our mayor?" :
+				"So. Crazy question. Do you think the gods would approve of our mayor?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
+				},
+			"CultMention" : 
+				{
+				"I just joined a libertarian organization aimed at changing the system and freeing the people from oppression. While important, it's also important that we ourselves form a grand family ourselves." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				}
+		},
+		"Communism" : 
+			{
+			"SmallTalk" : 
+				{
+				"So. Karl Marx, amirite?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				},
+			"CultHint" : 
+				{
+				"You know, it is said that when those of enough faith come together, it creates a power in and of itself. Could we conjure that power?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Communism" : {
+		"Monarchy" : 
+			{
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
-				"You know, it is said that when those of enough faith come together, it creates a power in and of itself. Could we conjure that power?" :
-				},
-			"CultMention" : 
-				{
-				}
-		},
-		"Monarchy" : {
-			"SmallTalk" : 
-				{
-				},
-			"CultHint" : 
-				{
-				"You know, I think if God had his way, society would be a lot clearer in its path." :
+				"You know, I think if God had his way, society would be a lot clearer in its path." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		}
 	},
-	"Athletics" : {
-		"Sports_watching" : {
+	"Athletics" : 
+		{
+		"Sports_watching" : 
+			{
 			"SmallTalk" : 
 				{
+				"So how 'bout them local sports teams?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"You ready for the Pats to win another superbowl?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"If you want to see some sick bouldering you should check out La Sportiva's Legends Only." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultHint" : 
 				{
-				"Who’s the best athlete in history? I think it’s Salahuddin Ayyubi." :
+				"Who’s the best athlete in history? I think it’s John Madden." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Sports_playing" : {
+		"Sports_playing" : 
+			{
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
+				"I'm part of this group that goes curling every Tuesday. You should join us sometime.": 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"Do you think you could win in a cage match with a god?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Exercise" : {
+		"Exercise" : 
+			{
 			"SmallTalk" : 
 				{
-				"How many Bibles you think you could bench press?" :
+				"You ever try the One-Punch Man workout? 100 push-ups, 100 sit-ups, 100 squats, and a 10k. EVERY DAY. Works wonders.": 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"How many Bibles you think you could bench press?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultHint" : 
 				{
+					
+					"Running drills at the gym is one thing, but running drills to lead the community to betterment is much more fulfilling." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		}
 	},
-	"Health_Lifestyle" : {
+	"Health_Lifestyle" : 
+		{
 		"Diet" : {
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
-				"If the blood of Christ were a coffee, how many shots of espresso would be in it?":
+				"If the blood of Christ were a coffee, how many shots of espresso would be in it?": 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Environmentalism" : {
+		"Environmentalism" : 
+			{
 			"SmallTalk" : 
 				{
+				"Have you heard that France is planning on shutting down all coal fired powerplants by 2021? Pretty cool, huh.": 
+					{
+					"Positive" : 
+						[
+						"Yes!! Another step towards saving the planet!"
+						],
+					"Negative" : 
+						[
+						"But jobs."
+						]
+					},
+				"Pretty bummed about that solar panel tariff. Is there any hope for our country?" : 
+					{
+					"Positive" : 
+						[
+						"With all the momentum of the environmentalist movement, there's no stopping us now! Don't lose hope!"
+						],
+					"Negative" : 
+						[
+						"I dunno. Don't we want to support local industry?",
+						"But jobs.",
+						"No need to be overdramatic."
+						]
+					}
 				},
 			"CultHint" : 
 				{
-				"Do you believe that the wind carries messages from the heavens?":
-				"By Allah, what is His greatest achievement the creation on this great green earth?" :
+				"Do you believe that the wind carries messages from the heavens?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"By Allah, what is His greatest achievement the creation on this great green earth?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Animal_Rights" : {
+		"Animal_Rights" : 
+			{
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
+				"I wonder, if animals could talk, would they approve of our sins?": 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Miracle_Pills" : {
+		"Miracle_Pills" : 
+			{
 			"SmallTalk" : 
 				{
 				},
 			"CultHint" : 
 				{
+				"One can shed the weight of fat with ease, but do you know the best way to shed the weight of sin?" :
+					 {
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
 				}
 		}
 	},
-	"Entertainment" : {
-		"Music" : {
+	"Entertainment" : 
+		{
+		"Music" : 
+			{
 			"SmallTalk" : 
 				{
+				"If you're into polyrhythms you should check out the Icelandic band Asgeir." : 
+					{
+					"Positive" : 
+						[
+						"Duuuuuuude. Polyrhythms are sick. I'll totally check them out.",
+						"I got to see Asgeir in concert! So amazing. If you're looking for other Scandinavian bands Kings of Convenience are good too."
+						],
+					"Negative" : 
+						[
+						"Umm.. I'm not really into multiple partners..."
+						]
+					}
 				},
 			"CultHint" : 
 				{
-				"What do you think about gospel and hymns? While not my favorite music, it has a certain connection to it that’s really moving. Do you feel it?":
-				"Is there anyone who really understands the true sense of enlightenment better than [insert religious singer here}?" :
+				"What do you think about gospel and hymns? While not my favorite music, it has a certain connection to it that’s really moving. Do you feel it?": 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"Is there anyone who really understands the true sense of enlightenment better than [insert religious singer here}?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{
+				"Is there anyone who really understands the true sense of enlightenment than the Priests of the Temples of Syrinx?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				}
 		},
 		"Movies" : {
 			"SmallTalk" : 
 				{
+				"Did you hear about that Bollywood movie, Padmaavat? Apparently it sparked a bunch of protests. Supposed to be a good movie though.": 
+					{
+					"Positive" : 
+						[
+						"Yeah, it was all over the news. Apparently someone offered a bounty for beheading the main actress? But on the bright side, the music was good."
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"Favorite Marvel film. Go." : 
+					{
+					"Positive" : 
+						[
+						"Wonder Woman. Hands down.",
+						"Hear me out. Ant-man. Paul Rudd is fantastic."
+						],
+					"Negative" : 
+						[
+						"Not really into action films. I prefer something with meaning.",
+						"I don't really watch movies. I'd rather do something productive"
+						]
+					},
+				"Thoughts on the Golden Globes this year?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultHint" : 
 				{
-				"My favorite movie? Shri Krishnavataram. Such a strong message. Yours?" :
+				"My favorite movie? Children of the Corn. Such a strong message. Yours?" : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						"Never heard of it."
+						]
+					},
+				"If there was one actor you had to follow to the ends of the earth on a shunned but true mission under the leadership of those in the shadows, who would it be? Don't worry, there's more than one correct answer." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					},
+				"If art is the reflection of the soul, then what does yours show? Are you really on the right path?" :	
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
+				{
+				}
+		},
+		"Art" : 
+			{
+			"SmallTalk" : 
+				{
+				"Did you check out the Murakami exhibit at the MFA? Really neat combo of eccentric and traditional.": 
+					{
+					"Positive" : 
+						[
+						"It was super cool! You should go back and listen to the soundtrack to Paprika while viewing the art. Really pairs well together."
+						],
+					"Negative" : 
+						[
+						"It was a bit too out there for me.",
+						"Ugh museums aren't my thing. You walk around for hours and have to be quiet the whole time."
+						]
+					},
+				},
+			"CultHint" : 
 				{
 				},
 			"CultMention" : 
 				{
 				}
 		},
-		"Art" : {
+		"Literature" : 
+			{
 			"SmallTalk" : 
 				{
+				"Non-fiction or fiction?": 
+					{
+					"Positive" : 
+						[
+						"Non-fiction. There's so much to learn about this world, why explore fictional ones?",
+						"Fiction. The stories and adventures are so much more exciting than real-life."
+						],
+					"Negative" : 
+						[
+						"Ummm. Shampoo bottles? I don't really read very much..."
+						]
+					},
+				"I've been reading a lot of Neil Gaiman's work recently. Any authors you're a fan of?" : 
+					{
+					"Positive" : 
+						[
+						"I've been going back to classic sci-fi. Isaac Asimov, Frank Herbert, that kinda stuff.",
+						"OK, bit of a guilty pleasure, but Nicholas Sparks. Makes me cry and swoon every time."
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultHint" : 
 				{
-				},
-			"CultMention" : 
-				{
-				}
-		},
-		"Literature" : {
-			"SmallTalk" : 
-				{
-				},
-			"CultHint" : 
-				{
+				"I think H. P. Lovecraft had the right idea with the Church of Starry Wisdom. The Esoteric Order of Dagon, mm, I appreciate the effort, but it fell a bit short." : 
+					{
+					"Positive" : 
+						[
+						],
+					"Negative" : 
+						[
+						]
+					}
 				},
 			"CultMention" : 
 				{

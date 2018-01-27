@@ -54,16 +54,11 @@ public class UserProfile : IUserProfile
 
     public static UserProfile UserProfileGenerator(Random random)
     {
-        int interestCount = 3;
-
-        Array allInterests = Enum.GetValues(typeof(Interest));
-        HashSet<Interest> interests = new HashSet<Interest>();
-
-        for (int i = 0; i< interestCount; i++)
-        {
-
-            interests.Add((Interest)allInterests.GetValue(random.Next(allInterests.Length)));
-        }
+        // TODO: Replace with real interests
+        List<Interest> interests = new List<Interest>();
+        interests.Add(new Interest("Entertainment", "80s Avante Garde French Film"));
+        interests.Add(new Interest("Health", "Veganism"));
+        interests.Add(new Interest("Athletics", "Deeply Uncomfortable Aerobics"));
 
         return new UserProfile(User.UserGenerator(random), interests);
     }

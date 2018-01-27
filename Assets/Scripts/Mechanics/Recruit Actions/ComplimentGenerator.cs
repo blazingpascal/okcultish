@@ -20,12 +20,14 @@ namespace AssemblyCSharp
 
 			bool isPlural = bodyPart.EndsWith ("s");
 
-			List<String> formats = new List<String>();
-			formats.Add ("Your {0} {1} very {2}");
-			formats.Add ("Your {0} {1} {2}");
-			formats.Add ("I like how {2} your {0} {1}");
-			formats.Add ("You have such {3}{2} {0}");
-			return String.Format(formats [random.Next (formats.Count)], 
+            List<String> formats = new List<String>
+            {
+                "Your {0} {1} very {2}",
+                "Your {0} {1} {2}",
+                "I like how {2} your {0} {1}",
+                "You have such {3}{2} {0}"
+            };
+            return String.Format(formats [random.Next (formats.Count)], 
 				bodyPart,
 				isPlural ? "are" : "is",
 				adjective,

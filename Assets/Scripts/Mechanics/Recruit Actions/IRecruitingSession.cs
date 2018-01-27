@@ -5,11 +5,11 @@ using System.Text;
 
 interface IRecruitingSession
 {
-	void complimentRecruit(Random r);
-	void smallTalkRecruit(Random r);
-	void mentionCultToRecruit(Random r);
-	void hintAtCultToRecruit(Random r);
-	void askToJoinCult(Random r);
+	void ComplimentRecruit(Random r);
+	void SmallTalkRecruit(Random r);
+	void MentionCultToRecruit(Random r);
+	void HintAtCultToRecruit(Random r);
+	void AskToJoinCult(Random r);
 	IMessage GenerateCompliment(Random r);
 	IMessage GenerateSmallTalk(Random r, Interest i);
 	IMessage GenerateCultMention(Random r, Interest i);

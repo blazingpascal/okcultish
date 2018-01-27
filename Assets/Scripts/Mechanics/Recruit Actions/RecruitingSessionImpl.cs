@@ -25,7 +25,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         this.gameManager = manager;
     }
 
-    public void complimentRecruit(System.Random r)
+    public void ComplimentRecruit(System.Random r)
     {
         IMessage msg = GenerateCompliment(r);
         platform.AddPlayerMessage(msg);
@@ -35,7 +35,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     }
 
-    public void smallTalkRecruit(System.Random r)
+    public void SmallTalkRecruit(System.Random r)
     {
         Interest interest = playerProfile.GetRandomInterest(r);
         IMessage msg = GenerateSmallTalk(r, interest);
@@ -46,7 +46,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL);
     }
 
-    public void mentionCultToRecruit(Random r)
+    public void MentionCultToRecruit(Random r)
     {
         Interest interest = playerProfile.GetRandomInterest(r);
         IMessage msg = GenerateCultMention(r, interest);
@@ -58,7 +58,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL);
     }
 
-    public void hintAtCultToRecruit(System.Random r)
+    public void HintAtCultToRecruit(System.Random r)
     {
         Interest interest = playerProfile.GetRandomInterest(r);
         IMessage msg = GenerateCultHint(r, interest);
@@ -70,7 +70,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL);
     }
 
-    public void askToJoinCult(System.Random r)
+    public void AskToJoinCult(System.Random r)
     {
         IMessage msg = GenerateJoinCultMessage(r);
         int roll = r.Next(INTEREST_MAX);

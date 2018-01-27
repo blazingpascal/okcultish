@@ -23,23 +23,23 @@ public class MinimalRecruitingSessionView : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            session.complimentRecruit(r);
+            session.ComplimentRecruit(r);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            session.smallTalkRecruit(r);
+            session.SmallTalkRecruit(r);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            session.hintAtCultToRecruit(r);
+            session.HintAtCultToRecruit(r);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            session.mentionCultToRecruit(r);
+            session.MentionCultToRecruit(r);
         }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            session.askToJoinCult(r);
+            session.AskToJoinCult(r);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {

@@ -2,11 +2,9 @@
 
 public interface IUser
 {
-    String GetFirstName();
-
-    String GetFullName();
-
+    string GetFirstName();
+    string GetFullName();
+    bool TryToConvert(Random random);
     int GetConversionChance();
-
     void ChangeConversionChance(int delta);
 }

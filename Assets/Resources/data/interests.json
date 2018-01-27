@@ -2,7 +2,7 @@
 	{
 	"Academics" : 
 		{
-		"Category" : 
+		"Science" : 
 			{
 			"SmallTalk" : 
 				{
@@ -27,7 +27,30 @@
 						[
 						"Should have been Hugh Jackman."
 						]
-					},
+					}
+				},
+			"CultHint" : 
+				{
+				},
+			"CultMention" : 
+				{
+				"As an esteemed member of the community, I work as a outsourcer for a union of fellow academics, aimed at the dissemination of important knowledge and the containment of the sensitive and dangerous." : 
+					{
+					"Positive" : 
+						[
+						"Voltaire and Locke are my jam."
+						],
+					"Negative" : 
+						[
+						"You mean those secular idealists? No thanks."
+						]
+					}
+				}
+		},
+		"Philosophy" : 
+			{
+			"SmallTalk" : 
+				{
 				"Are you a supporter of enlightenment philosophers?" : 
 					{
 					"Positive" : 
@@ -56,15 +79,6 @@
 				},
 			"CultMention" : 
 				{
-				"As an esteemed member of the community, I work as a outsourcer for a union of fellow academics, aimed at the dissemination of important knowledge and the containment of the sensitive and dangerous." : 
-					{
-					"Positive" : 
-						[
-						],
-					"Negative" : 
-						[
-						]
-					}
 				}
 		}
 	},

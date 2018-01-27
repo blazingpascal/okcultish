@@ -10,6 +10,14 @@ namespace AssemblyCSharp
 		{
 			
 		}
-	}
+
+        public User User
+        {
+            get
+            {
+                return user;
+            }
+        }
+    }
 }
 

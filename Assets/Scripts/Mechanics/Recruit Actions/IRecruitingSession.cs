@@ -17,5 +17,7 @@ interface IRecruitingSession
 	IMessage generateJoinCultMessage(Random r);
 	void setMessagingPlatform(IMessagingPlatform p);
 	bool IsOver { get; }
+	bool IsRecruited { get; }
+	void abort();
 }
 

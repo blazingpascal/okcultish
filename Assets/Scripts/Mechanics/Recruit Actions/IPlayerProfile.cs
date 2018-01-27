@@ -1,6 +1,6 @@
 ﻿using System;
 
-internal interface IPlayerProfile
+public interface IPlayerProfile
 {
 	Interest getRandomInterest(Random r);
 }

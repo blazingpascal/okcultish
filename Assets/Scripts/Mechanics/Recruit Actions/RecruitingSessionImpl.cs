@@ -17,6 +17,13 @@ public class RecruitingSessionImpl : IRecruitingSession
 	private IMessagingPlatform platform;
 	private bool isOver = false;
 
+	public RecruitingSessionImpl(IUserProfile currentRecruitProfile, IPlayerProfile playerProfile, IMessagingPlatform platform)
+	{
+		this.currentRecruitProfile = currentRecruitProfile;
+		this.playerProfile = playerProfile;
+		this.platform = platform;
+	}
+
 	public void complimentRecruit(System.Random r)
 	{
 		IMessage msg = generateCompliment(r);
@@ -24,6 +31,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
 		platform.addResponse(response, true);
 		currentInterest += COMPLIMENT_DELTA;
+
 	}
 
 	public void smallTalkRecruit(System.Random r)
@@ -42,7 +50,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.getRandomInterest(r);
 		IMessage msg = generateCultMention(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = roll < currentInterest;
+		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentInterest;
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateCultMentionResponse(r, success, interest);
 		platform.addResponse(response, success);
@@ -54,7 +62,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		Interest interest = playerProfile.getRandomInterest(r);
 		IMessage msg = generateCultHint(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = roll < currentInterest;
+		bool success = currentRecruitProfile.interestedIn(interest) && roll < currentInterest;
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateCultHintResponse(r, success, interest);
 		platform.addResponse(response, success);
@@ -68,32 +76,32 @@ public class RecruitingSessionImpl : IRecruitingSession
 		bool success = roll < currentInterest;
 		platform.addPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateJoinCultResponse(r, success);
-		platform.addResponse(response);
+		platform.addResponse(response, success);
+		this.currentInterest = -1;
 	}
 
 	public IMessage generateCompliment(System.Random r)
 	{
-		throw new NotImplementedException();
+		// TODO
+		return new TestMessage("Your nostrils are very progressive.");
 	}
 
 	public IMessage generateSmallTalk(System.Random r, Interest interest)
 	{
-		throw new NotImplementedException();
+		// TODO
+		return new TestMessage("How do you feel about " + interest.ToString());
 	}
 
 	public IMessage generateCultMention(System.Random r, Interest interest)
 	{
-		throw new NotImplementedException();
-	}
-
-	public IMessage generateCultHint(System.Random r)
-	{
-		throw new NotImplementedException();
+		// TODO
+		return new TestMessage("Do you think you could win a cage match with Jesus?");
 	}
 
 	public IMessage generateJoinCultMessage(System.Random r)
 	{
-		return new TestMessage("")
+		// TODO
+		return new TestMessage("Hey, wanna join my cult?");
 	}
 
 	public void setMessagingPlatform(IMessagingPlatform p)
@@ -107,18 +115,21 @@ public class RecruitingSessionImpl : IRecruitingSession
 		return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
 	}
 
-	public bool IsOver
+	public void abort()
 	{
-		get { return this.isOver; }
+		this.isOver = true;
 	}
 
-	private class TestMessage
+	public bool IsOver
 	{
-		private string msg;
+		get { return this.currentInterest < 0; }
+	}
 
-		public TestMessage(string v)
+	public bool IsRecruited
+	{
+		get
 		{
-			this.msg = v;
+			return this.currentInterest > INTEREST_MAX;
 		}
 	}
 }

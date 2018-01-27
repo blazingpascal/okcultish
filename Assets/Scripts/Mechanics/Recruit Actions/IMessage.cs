@@ -1,5 +1,5 @@
 ﻿
 public interface IMessage
 {
-	string getMessage();
+	string GetMessage();
 }

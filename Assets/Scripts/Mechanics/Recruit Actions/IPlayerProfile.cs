@@ -2,5 +2,5 @@
 
 public interface IPlayerProfile
 {
-	Interest getRandomInterest(Random r);
+	Interest GetRandomInterest(Random r);
 }

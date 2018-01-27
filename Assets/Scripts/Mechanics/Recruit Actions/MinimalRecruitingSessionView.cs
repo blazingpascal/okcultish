@@ -40,7 +40,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 
 	private class TestPlayerProfile : IPlayerProfile
 	{
-		public Interest getRandomInterest(System.Random r)
+		public Interest GetRandomInterest(System.Random r)
 		{
 			int roll = r.Next(100);
 			if(roll < 50)
@@ -60,7 +60,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			return new TestMessage("Oh my gawsh thx ;)");
 		}
 
-		public IMessage generateCultHintResponse(System.Random r, bool success, Interest interest)
+		public IMessage GenerateCultHintResponse(System.Random r, bool success, Interest interest)
 		{
 			if (success)
 			{
@@ -69,7 +69,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			return new TestMessage("That's kinda weird you spend so much time thinking about " + interest.ToString());
 		}
 
-		public IMessage generateCultMentionResponse(System.Random r, bool success, Interest interest)
+		public IMessage GenerateCultMentionResponse(System.Random r, bool success, Interest interest)
 		{
 			if (success)
 			{
@@ -78,7 +78,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			return new TestMessage("That's, uh, that's really weird.");
 		}
 
-		public IMessage generateJoinCultResponse(System.Random r, bool success)
+		public IMessage GenerateJoinCultResponse(System.Random r, bool success)
 		{
 			if (success)
 			{
@@ -87,7 +87,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			return new TestMessage("Ew no what the hell.");
 		}
 
-		public IMessage generateSmallTalkResponse(System.Random r, bool success, Interest interest)
+		public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)
 		{
 			if (success)
 			{
@@ -96,7 +96,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 			return new TestMessage("Eh, I'm not really interested in " + interest);
 		}
 
-		public bool interestedIn(Interest interest)
+		public bool InterestedIn(Interest interest)
 		{
 			foreach(Interest i in interests)
 			{

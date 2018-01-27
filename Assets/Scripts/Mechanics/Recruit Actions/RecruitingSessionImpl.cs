@@ -27,100 +27,100 @@ public class RecruitingSessionImpl : IRecruitingSession
 
 	public void complimentRecruit(System.Random r)
 	{
-		IMessage msg = generateCompliment(r);
-		platform.addPlayerMessage(msg);
+		IMessage msg = GenerateCompliment(r);
+		platform.AddPlayerMessage(msg);
 		IMessage response = currentRecruitProfile.generateComplimentResponse(r);
-		platform.addResponse(response, true);
+		platform.AddResponse(response, true);
 		cultConversionChance += COMPLIMENT_DELTA;
 
 	}
 
 	public void smallTalkRecruit(System.Random r)
 	{
-		Interest interest = playerProfile.getRandomInterest(r);
-		IMessage msg = generateSmallTalk(r, interest);
-		bool success = currentRecruitProfile.interestedIn(interest);
-		platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateSmallTalkResponse(r, success, interest);
-		platform.addResponse(response, success);
+		Interest interest = playerProfile.GetRandomInterest(r);
+		IMessage msg = GenerateSmallTalk(r, interest);
+		bool success = currentRecruitProfile.InterestedIn(interest);
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateSmallTalkResponse(r, success, interest);
+		platform.AddResponse(response, success);
 		cultConversionChance += success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL;
 	}
 
 	public void mentionCultToRecruit(Random r)
 	{
-		Interest interest = playerProfile.getRandomInterest(r);
-		IMessage msg = generateCultMention(r, interest);
+		Interest interest = playerProfile.GetRandomInterest(r);
+		IMessage msg = GenerateCultMention(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < cultConversionChance;
-		platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateCultMentionResponse(r, success, interest);
-		platform.addResponse(response, success);
+		bool success = currentRecruitProfile.InterestedIn(interest) && roll < cultConversionChance;
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateCultMentionResponse(r, success, interest);
+		platform.AddResponse(response, success);
 		cultConversionChance += success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL;
 	}
 
 	public void hintAtCultToRecruit(System.Random r)
 	{
-		Interest interest = playerProfile.getRandomInterest(r);
-		IMessage msg = generateCultHint(r, interest);
+		Interest interest = playerProfile.GetRandomInterest(r);
+		IMessage msg = GenerateCultHint(r, interest);
 		int roll = r.Next(INTEREST_MAX);
-		bool success = currentRecruitProfile.interestedIn(interest) && roll < cultConversionChance;
-		platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateCultHintResponse(r, success, interest);
-		platform.addResponse(response, success);
+		bool success = currentRecruitProfile.InterestedIn(interest) && roll < cultConversionChance;
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateCultHintResponse(r, success, interest);
+		platform.AddResponse(response, success);
 		cultConversionChance += success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL;
 	}
 
 	public void askToJoinCult(System.Random r)
 	{
-		IMessage msg = generateJoinCultMessage(r);
+		IMessage msg = GenerateJoinCultMessage(r);
 		int roll = r.Next(INTEREST_MAX);
 		bool success = roll < cultConversionChance;
-		platform.addPlayerMessage(msg);
-		IMessage response = currentRecruitProfile.generateJoinCultResponse(r, success);
-		platform.addResponse(response, success);
+		platform.AddPlayerMessage(msg);
+		IMessage response = currentRecruitProfile.GenerateJoinCultResponse(r, success);
+		platform.AddResponse(response, success);
 		if (success)
 		{
-			this.gameManager.incrementRecruitCount();
+			this.gameManager.IncrementRecruitCount();
 		}
 		this.cultConversionChance = -1;
 	}
 
-	public IMessage generateCompliment(System.Random r)
+	public IMessage GenerateCompliment(System.Random r)
 	{
 		// TODO
 		return new TestMessage("Your nostrils are very progressive.");
 	}
 
-	public IMessage generateSmallTalk(System.Random r, Interest interest)
+	public IMessage GenerateSmallTalk(System.Random r, Interest interest)
 	{
 		// TODO
 		return new TestMessage("How do you feel about " + interest.ToString());
 	}
 
-	public IMessage generateCultMention(System.Random r, Interest interest)
+	public IMessage GenerateCultMention(System.Random r, Interest interest)
 	{
 		// TODO
 		return new TestMessage("Do you think you could win a cage match with Jesus?");
 	}
 
-	public IMessage generateJoinCultMessage(System.Random r)
+	public IMessage GenerateJoinCultMessage(System.Random r)
 	{
 		// TODO
 		return new TestMessage("Hey, wanna join my cult?");
 	}
 
-	public void setMessagingPlatform(IMessagingPlatform p)
+	public void SetMessagingPlatform(IMessagingPlatform p)
 	{
 		this.platform = p;
 	}
 
-	public IMessage generateCultHint(Random r, Interest i)
+	public IMessage GenerateCultHint(Random r, Interest i)
 	{
 		// TODO
 		return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
 	}
 
-	public void abort()
+	public void Abort()
 	{
 		this.cultConversionChance = -1;
 	}

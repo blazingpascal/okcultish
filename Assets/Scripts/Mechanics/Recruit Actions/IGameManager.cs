@@ -1,4 +1,4 @@
 ﻿public interface IGameManager
 {
-	void incrementRecruitCount();
+	void IncrementRecruitCount();
 }

@@ -11,10 +11,10 @@ public class User : IUser
 	private static RandomSelector maleFirstNameSelector = new RandomSelector(MALE_FIRST_NAME_FILE);
 	private static RandomSelector lastNameSelector = new RandomSelector(LAST_NAME_FILE);
 
-	private String firstName;
-	private String lastName;
-	private int cultConversionChance;
-	private Gender gender;
+private String firstName;
+private String lastName;
+private int cultConversionChance;
+public Gender Gender { get; private set; }
 
 	private static Random random = new Random();
 
@@ -30,19 +30,11 @@ public class User : IUser
 		}
 	}
 
-	public Gender Gender
-	{
-		get
-		{
-			return this.gender;
-		}
-	}
-
 	private User(String firstName, String lastName, Gender gender, int cultConversionChance, double distance)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.gender = gender;
+		this.Gender = gender;
 		this.cultConversionChance = cultConversionChance;
 		this.distance = distance;
 	}

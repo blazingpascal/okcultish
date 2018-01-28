@@ -20,26 +20,23 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateCultHintResponse(Random r, bool success, Interest interest)
     {
-        // TODO
-        return new MessageImpl(success ? "Oh, tell me more" : "uh ok");
+        return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateCultMentionResponse(Random r, bool success, Interest interest)
     {
-        // TODO
-        return new MessageImpl(success ? "That's really interesting" : "...");
+        return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
+    }
+
+    public IMessage GenerateSmallTalkResponse(Random r, bool success, Interest interest)
+    {
+        return new MessageImpl(InterestsHandler.GenerateSmallTalkResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateJoinCultResponse(Random r, bool success)
     {
         // TODO
         return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
-    }
-
-    public IMessage GenerateSmallTalkResponse(Random r, bool success, Interest interest)
-    {
-        // TODO
-        return new MessageImpl(success ? "I too am interested in this" : "k.");
     }
 
     public bool InterestedIn(Interest interest)

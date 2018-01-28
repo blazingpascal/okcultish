@@ -95,12 +95,12 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     public IMessage GenerateSmallTalk(Random r, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.SmallTalkMessage(r, interest));
+        return new MessageImpl(InterestsHandler.GeneratSmallTalkMessage(r, interest));
     }
 
     public IMessage GenerateCultMention(Random r, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.CultMentionMessage(r, interest));
+        return new MessageImpl(InterestsHandler.GenerateCultMentionMessage(r, interest));
     }
 
     public IMessage GenerateJoinCultMessage(Random r)
@@ -116,7 +116,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     public IMessage GenerateCultHint(Random r, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.CultHintMessage(r, interest));
+        return new MessageImpl(InterestsHandler.GenerateCultHintMessage(r, interest));
     }
 
 

@@ -14,13 +14,17 @@ public class MusicManager : MonoBehaviour
     void Awake()
     {
         if (instance != null && instance != this
-            || GetComponent<AudioSource>().clip == instance.GetComponent<AudioSource>().clip)
+            && GetComponent<AudioSource>().clip.name.Equals(instance.GetComponent<AudioSource>().clip.name))
         {
             Destroy(gameObject);
             return;
         }
         else
         {
+            if (instance != null) {
+                instance.GetComponent<AudioSource>().Stop();
+            }
+            GetComponent<AudioSource>().Play();
             instance = this;
         }
 

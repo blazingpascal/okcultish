@@ -29,6 +29,7 @@ public class SwipingProfileImpl : MonoBehaviour
 		LoadNewProfile();
 		acceptButton.onClick.AddListener(Accept);
 		rejectButton.onClick.AddListener(Reject);
+		manager.RoundGoing = true;
 	}
 
 	private void LoadNewProfile()

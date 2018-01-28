@@ -7,10 +7,11 @@ public class GameManager : MonoBehaviour, IGameManager
 	private const long MS_PER_ROUND = (long)(2 * 60 * 1000);
 	private const int MS_INCREASE_PER_ROUND = 0;
 
-	private IPlayerProfile playerProfile = new TestProfile();
+	private IPlayerProfile playerProfile;
 	private UserProfile currentMatch;
-	private GameState gameState;
+	private GameState gameState = GameState.Title;
 	private bool roundOver = false;
+	private bool roundGoing = false;
 
 	internal void SetMessagingPlatform(MessagingPlatformViewImpl messagingPlatformViewImpl)
 	{
@@ -60,8 +61,8 @@ public class GameManager : MonoBehaviour, IGameManager
 	public long TimeRemaining { get; private set; }
 	public int CurrentRound { get; private set; }
 	public bool HasLost { get; private set; }
-    public bool IsRunning { get; private set; }
-    public bool IsUiLocked { get; set; }
+	public bool IsRunning { get; private set; }
+	public bool IsUiLocked { get; set; }
 
 	internal IRecruitingSession CurrentRecruitingSession { get; set; }
 
@@ -102,12 +103,13 @@ public class GameManager : MonoBehaviour, IGameManager
 		DontDestroyOnLoad(transform.gameObject);
 		CurrentRound = 0;
 		ScoreForRound = 0;
-		InitNewRound();
 		HasLost = false;
 		IsRunning = false;
 	}
 
-		void Update()
+	void Update()
+	{
+		if (this.roundGoing)
 		{
 			TimeRemaining -= (long)(1000 * Time.deltaTime);
 			if (TimeRemaining <= 0)
@@ -131,6 +133,7 @@ public class GameManager : MonoBehaviour, IGameManager
 				}
 			}
 		}
+	}
 
 	public int SecondsLeft
 	{
@@ -148,6 +151,22 @@ public class GameManager : MonoBehaviour, IGameManager
 		}
 	}
 
+	public bool RoundGoing
+	{
+		get
+		{
+			return roundGoing;
+		}
+
+		set
+		{
+			if (value && !roundGoing)
+			{
+				roundGoing = value;
+				InitNewRound();
+			}
+		}
+	}
 
 	public void InitNewRound()
 	{

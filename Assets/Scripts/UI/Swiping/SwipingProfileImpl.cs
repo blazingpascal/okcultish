@@ -14,15 +14,21 @@ public class SwipingProfileImpl : MonoBehaviour
 
 	public void Awake()
 	{
-		SceneManager.LoadScene(4, LoadSceneMode.Additive);
+		manager = FindObjectOfType<GameManager>();
+		if (manager == null)
+		{
+			SceneManager.LoadScene(4, LoadSceneMode.Additive);
+			
+		}
+
 	}
 
 	public void Start()
 	{
+		manager = FindObjectOfType<GameManager>();
 		LoadNewProfile();
 		acceptButton.onClick.AddListener(Accept);
 		rejectButton.onClick.AddListener(Reject);
-		manager = FindObjectOfType<GameManager>();
 	}
 
 	private void LoadNewProfile()

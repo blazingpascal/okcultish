@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour, IGameManager
 {
 	private const int QUOTA_INCREASE_PER_ROUND = 1;
-	private const long MS_PER_ROUND = (long)(0.5 * 60 * 1000);
+	private const long MS_PER_ROUND = (long)(2 * 60 * 1000);
 	private const int MS_INCREASE_PER_ROUND = 0;
 
 	private IPlayerProfile playerProfile = new TestProfile();
@@ -107,36 +107,46 @@ public class GameManager : MonoBehaviour, IGameManager
 		IsRunning = false;
 	}
 
-/*	void Update()
-	{
-		TimeRemaining -= (long)(1000 * Time.deltaTime);
-		if (TimeRemaining <= 0)
+		void Update()
 		{
-			HasLost = ScoreForRound < Quota;
-			IsRunning = false;
-
-			if (!roundOver)
+			TimeRemaining -= (long)(1000 * Time.deltaTime);
+			if (TimeRemaining <= 0)
 			{
-				if (HasLost)
-				{
-					GameState = GameState.Losing;
+				HasLost = ScoreForRound < Quota;
+				IsRunning = false;
 
-				}
-				else
+				if (!roundOver)
 				{
-					GameState = GameState.Awarded;
+					if (HasLost)
+					{
+						GameState = GameState.Losing;
+
+					}
+					else
+					{
+						GameState = GameState.Awarded;
+					}
+					TotalScore += ScoreForRound;
+					roundOver = true;
 				}
-				TotalScore += ScoreForRound;
-				roundOver = true;
 			}
 		}
 
-        if (IsUiLocked && Time.time >= unlockTime)
-        {
-            IsUiLocked = false;
-        }
-	}*/
+	public int SecondsLeft
+	{
+		get
+		{
+			return (int)TimeRemaining / 1000;
+		}
+	}
 
+	public int TotalTime
+	{
+		get
+		{
+			return (int)MS_PER_ROUND / 1000;
+		}
+	}
 
 
 	public void InitNewRound()

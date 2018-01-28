@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class BatteryView : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class BatteryView : MonoBehaviour
     private int percentLeft;
     private int totalTime;
     private float timeLeft;
+
+	public Image fillBar;
 
     private IGameManager manager;
 
@@ -30,7 +33,9 @@ public class BatteryView : MonoBehaviour
     {
         timeLeft = manager.SecondsLeft;
         percentLeft = ((int)(100 * GetTimeLeft() / totalTime));
-        GetComponent<Transform>().localScale = new Vector3(percentLeft / 100f, 1);
+		//GetComponent<Transform>().localScale = new Vector3(percentLeft / 100f, 1);
+		fillBar.fillAmount = percentLeft * 0.01f;
     }
+
 }
 

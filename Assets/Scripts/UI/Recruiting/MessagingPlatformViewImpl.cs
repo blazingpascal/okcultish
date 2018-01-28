@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class MessagingPlatformViewImpl : AMessagingPlatformView
 {
-    private const int TYPING_DELAY = 2000;
+    private const int TYPING_DELAY = 1000;
     private int internalTimer = 0;
     private bool waitForResponse = false;
 
@@ -57,7 +57,7 @@ public class MessagingPlatformViewImpl : AMessagingPlatformView
     {
         foreach (AMessageView view in queue)
         {
-            yield return new WaitForSeconds((float)TYPING_DELAY / 1000);
+            yield return new WaitForSeconds((float)TYPING_DELAY / 1000f);
             AddMessageToUI(view);
         }
         manager.IsUiLocked = false;

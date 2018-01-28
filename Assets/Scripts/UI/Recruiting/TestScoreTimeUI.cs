@@ -6,7 +6,6 @@ public class TestScoreTimeUI : MonoBehaviour
 {
 	private GameManager gm;
 	public Text score;
-	public Text time;
 	void Start()
 	{
 		gm = FindObjectOfType<GameManager>();
@@ -15,7 +14,6 @@ public class TestScoreTimeUI : MonoBehaviour
 	void Update()
 	{
 		score.text = gm.ScoreForRound + "/" + gm.Quota;
-		time.text = gm.TimeRemaining.ToString();
 	}
 }
 

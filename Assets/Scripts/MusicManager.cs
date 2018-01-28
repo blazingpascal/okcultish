@@ -13,9 +13,10 @@ public class MusicManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null && instance != this)
+        if (instance != null && instance != this
+            || GetComponent<AudioSource>().clip == instance.GetComponent<AudioSource>().clip)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
         else
@@ -23,7 +24,7 @@ public class MusicManager : MonoBehaviour
             instance = this;
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

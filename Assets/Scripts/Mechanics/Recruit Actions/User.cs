@@ -14,7 +14,7 @@ private static RandomSelector lastNameSelector = new RandomSelector(LAST_NAME_FI
 private String firstName;
 private String lastName;
 private int cultConversionChance;
-private Gender gender;
+public Gender Gender { get; private set; }
 
 private static Random random = new Random();
 
@@ -25,7 +25,7 @@ private User(String firstName, String lastName, Gender gender, int cultConversio
 {
 	this.firstName = firstName;
 	this.lastName = lastName;
-	this.gender = gender;
+	this.Gender = gender;
 	this.cultConversionChance = cultConversionChance;
 }
 

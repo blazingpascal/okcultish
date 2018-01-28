@@ -7,4 +7,5 @@ public interface IUser
     bool TryToConvert(Random random);
     int GetConversionChance();
     void ChangeConversionChance(int delta);
+    Gender Gender { get; }
 }

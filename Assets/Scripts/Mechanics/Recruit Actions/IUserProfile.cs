@@ -10,4 +10,5 @@ public interface IUserProfile
 	IMessage GenerateJoinCultResponse(Random r, bool success);
 	IMessage GenerateAbortResponse(Random r);
     IUser GetUser();
+    UnityEngine.Sprite Image { get; }
 }

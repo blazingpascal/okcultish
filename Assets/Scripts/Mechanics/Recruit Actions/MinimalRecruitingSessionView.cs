@@ -64,6 +64,14 @@ public class MinimalRecruitingSessionView : MonoBehaviour
         User user = User.UserGenerator(new System.Random());
         Interest[] interests = { new Interest("Athletics", "Watching Sports"), new Interest("Entertainment", "Art") };
 
+        public Sprite Image
+        {
+            get
+            {
+                return Resources.Load<Sprite>("images/profile_images/male_portraits/13887_10151657163159067_259519404_n.jpg");
+            }
+        }
+
         public IMessage GenerateAbortResponse(System.Random r)
         {
             return new TestMessage("uh ok");

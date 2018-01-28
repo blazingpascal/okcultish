@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -88,18 +89,15 @@ public class UserProfile : IUserProfile
         String filename = user.Gender == Gender.Female ?
             female_filenames[random.Next(female_filenames.Count)] :
             male_filenames[random.Next(male_filenames.Count)];
-        
-            return new UserProfile(user, interests, filename);
+        // filename = "1237118_10151657162489067_694647709_n"; // FIXME
+        filename = Path.GetFileNameWithoutExtension(filename);
+
+        return new UserProfile(user, interests, filename);
     }
 
     public IMessage GenerateAbortResponse(System.Random r)
     {
         return new MessageImpl("lolno");
     }
-
-	public Sprite LoadPicture()
-	{
-		return null;
-	}
 }
 

@@ -59,7 +59,7 @@ public class UserProfile : IUserProfile
         {
             new Interest("Entertainment", "80s Avante Garde French Film"),
             new Interest("Health", "Veganism"),
-            new Interest("Athletics", "Deeply Uncomfortable Aerobics")
+            new Interest("Music", "Third Century Rock Opera")
         };
 
         return new UserProfile(User.UserGenerator(random), interests);

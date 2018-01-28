@@ -3,16 +3,17 @@ using System.Collections.Generic;
 
 public class TestProfile : IPlayerProfile
 {
-	public List<Interest> interests = new List<Interest>
-		{
-			new Interest("Entertainment", "80s Avante Garde French Film"),
-			new Interest("Health", "Veganism"),
-			new Interest("Athletics", "Deeply Uncomfortable Aerobics")
-		};
+	public List<Interest> interests;
 
 	public TestProfile()
 	{
-		
+		interests = new List<Interest>();
+		for(int i = 0; i < 3; i++)
+		{
+			interests.Add(InterestsHandler.GetRandomInterest(new Random()));
+			interests.Add(InterestsHandler.GetRandomInterest(new Random()));
+			interests.Add(InterestsHandler.GetRandomInterest(new Random()));
+		}
 	}
 
 	public Interest GetRandomInterest(Random r)

@@ -10,19 +10,6 @@ public class MessagingPlatformViewImpl : AMessagingPlatformView
 	public AMessageView playerMessageView;
 	public AMessageView recruitMessageView;
 
-	public void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			foo(Vector2.zero);
-		}	
-	}
-
-	private void foo(Vector2 arg0)
-	{
-		UpdateScroll();
-	}
-
 	public override void AddPlayerMessage(IMessage message)
 	{
 		AMessageView playerMsg = Instantiate(playerMessageView);

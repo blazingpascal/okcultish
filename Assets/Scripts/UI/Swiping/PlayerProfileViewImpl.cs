@@ -34,7 +34,16 @@ public class PlayerProfileViewImpl : MonoBehaviour
 		StringBuilder sb = new StringBuilder();
 		foreach (Interest i in interests)
 		{
-			sb.Append(i.ToString() + "\n");
+
+			string interestString = i.ToString();
+			if (interestString.Trim().Length == 0)
+			{
+				sb.Append("Blank");
+			}
+			else
+			{
+				sb.Append(interestString + "\n");
+			}
 		}
 		return sb.ToString();
 	}

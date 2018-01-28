@@ -30,23 +30,26 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateCultHintResponse(System.Random r, bool success, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
+		// TODO
+		return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateCultMentionResponse(System.Random r, bool success, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
-    }
+		// TODO
+		return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
+	}
 
     public IMessage GenerateJoinCultResponse(System.Random r, bool success)
     {
-		return new MessageImpl("Join Cult Plz TODO");
+        // TODO
+        return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
     }
 
     public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)
     {
-        // TODO
-        return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
+		// TODO
+		return new MessageImpl(InterestsHandler.GenerateSmallTalkResponseMessage(r, success, interest));
     }
 
     public bool InterestedIn(Interest interest)
@@ -61,12 +64,15 @@ public class UserProfile : IUserProfile
 
     public static UserProfile UserProfileGenerator(System.Random random)
     {
-        int interestCount = 3;
-        List<Interest> interests = new List<Interest>();
-        for (int i=0; i<interestCount; i++)
-        {
-            interests.Add(InterestsHandler.GetRandomInterest(random));
-        }
+		System.Random r = new System.Random();
+		// TODO: Replace with real interests
+		List<Interest> interests = new List<Interest>
+		{
+			InterestsHandler.GetRandomInterest(r),
+			InterestsHandler.GetRandomInterest(r),
+			InterestsHandler.GetRandomInterest(r),
+		};
+
         return new UserProfile(User.UserGenerator(random), interests);
     }
 

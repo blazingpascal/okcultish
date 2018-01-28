@@ -17,5 +17,6 @@ public class LoseScreenUI : MonoBehaviour
 		daysServedText.text = string.Format("Days Served: {0}", gm.CurrentRound);
 		totalScoreText.text = string.Format("People Recruited: {0}", gm.TotalScore);
 		exit.onClick.AddListener(() => Application.Quit());
+		playAgainButton.onClick.AddListener(() => gm.GameState = GameState.Title);
 	}
 }

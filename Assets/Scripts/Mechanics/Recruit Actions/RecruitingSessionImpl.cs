@@ -23,9 +23,6 @@ public class RecruitingSessionImpl : IRecruitingSession
         this.playerProfile = playerProfile;
         this.platform = platform;
         this.gameManager = manager;
-        var foo = InterestsHandler.GetCategories();
-        var bar = InterestsHandler.GetAllInterests();
-
     }
 
     public void ComplimentRecruit(Random r)

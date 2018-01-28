@@ -51,7 +51,13 @@ public class UserProfile : IUserProfile
 
     public static UserProfile UserProfileGenerator(Random random)
     {
-        return new UserProfile(User.UserGenerator(random), InterestsHandler.GetAllInterests());
+        int interestCount = 3;
+        List<Interest> interests = new List<Interest>();
+        for (int i=0; i<interestCount; i++)
+        {
+            interests.Add(InterestsHandler.GetRandomInterest(random));
+        }
+        return new UserProfile(User.UserGenerator(random), interests);
     }
 
     public IMessage GenerateAbortResponse(Random r)

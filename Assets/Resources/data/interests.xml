@@ -246,10 +246,10 @@
 					<Name>Communism</Name>
 					<SmallTalks>
 						<SmallTalk>
-							<Text>So. Karl Marx, amirite?"</Text>
+							<Text>So. Karl Marx, amirite?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text>"I feel an uprising in my lower class at the thought of accessing your means of production."</Text>
+									<Text>I feel an uprising in my lower class at the thought of accessing your means of production.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
@@ -453,7 +453,7 @@
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text>You mean the "sport" where they roll rocks on ice and sweep brooms? No thanks.</Text>
+									<Text>You mean the sport where they roll rocks on ice and sweep brooms? No thanks.</Text>
 								</NegResponse>
 								<NegResponse>
 									<Text>Sounds like a bunch of dorks, to be honest.</Text>
@@ -563,15 +563,15 @@
 					<Name>Diet</Name>
 					<SmallTalks>
 						<SmallTalk>
-							<Text></Text>
+							<Text>What d'ya think of Paleo?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>Really neat idea, especially since evolution really isn't as fast as everyone thinks it is.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Pretty neat how they found fire, I guess.</Text>
 								</NegResponse>
 							</NegResponses>
 						</SmallTalk>
@@ -581,27 +581,27 @@
 							<Text>If the blood of Christ were a coffee, how many shots of espresso would be in it?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>Ohh, tough question. Don't think it'd need the extra caffeine, to be honest.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>I dunno. Not enough for me, in any case.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
 					</CultHints>
 					<CultMentions>
 						<CultMention>
-							<Text></Text>
+							<Text>Some of the other initiates and I at the coven keep a dieting roster to keep everyone on the straight and narrow. The Chief Cleric loves us.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>Support networks are the best, aren't they?</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Sounds like you have more pressing...thematic issues going on than dieting in that group. Yeesh....</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -632,7 +632,7 @@
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text>I dunno. Don't we want to support local industry?"</Text>
+									<Text>I dunno. Don't we want to support local industry?</Text>
 								</NegResponse>
 								<NegResponses>
 								<NegResponse>
@@ -652,27 +652,94 @@
 							<Text>Do you believe that the wind carries messages from the heavens?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>What else would it carry?</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>The wind carries nothing but bugs and wind chill.</Text>
+								</NegResponse>
+								<NegResponse>
+									<Text>Depends on how crude you intended that message to be...</Text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+						<CultHint>
+							<Text>By Allah, what is His greatest achievement in the creation of this great green earth??</Text>
+							<PosResponses>
+								<PosResponse>
+									<Text>Perhaps the ability for one to love~</Text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<Text>me lol.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
 					</CultHints>
 					<CultMentions>
 						<CultMention>
-							<Text></Text>
+							<Text>Did you know there was an environmental equivalent to PETA, in a way? We're more of a close-knit organization with a more sturdy code and stronger drive. More effective in our cause, too, according to yours truly.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>I hope you're doing alright. Someone needs to speak for the trees.</Text>
+								</PosResponse>
+								<PosResponse>
+									<Text>Wow, finally! Didn't know anyone was so dedicated to saving the Earth!</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Anything like that is much too extreme.</Text>
+								</NegResponse>
+							</NegResponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Animal_Rights</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<Text>Dogs or cats?</Text>
+							<PosResponses>
+								<PosResponse>
+									<Text>How could I even decide!</Text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<Text>Ehh, never was a fan of animals; I'm allergic to too many...</Text>
+								</NegResponse>
+							</NegResponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<Text>I wonder, if animals could talk, would they approve of our sins?</Text>
+							<PosResponses>
+								<PosResponse>
+									<Text>If animals could talk, they would better us to not having any sins in the first place.</Text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<Text>Asking this was already a sin against my eyes.</Text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<Text>My family - not real family, mind you, but real enough - staged a rights rally in Washington State last year that freed a ton of oppressed creatures and found many new initiates, including me!</Text>
+							<PosResponses>
+								<PosResponse>
+									<Text>The heroes they need</Text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<Text>What a way to spend a day. Go to a club for once, why don't you.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -682,15 +749,15 @@
 					<Name>Miracle_Pills</Name>
 					<SmallTalks>
 						<SmallTalk>
-							<Text></Text>
+							<Text>Red pill or blue?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>Take the road less traveled, as I always say. I'll take the risk with red anytime.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>No pill? Seems unnatural.</Text>
 								</NegResponse>
 							</NegResponses>
 						</SmallTalk>
@@ -700,27 +767,27 @@
 							<Text>One can shed the weight of fat with ease, but do you know the best way to shed the weight of sin?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>Ah, is it 'believing'? That's a clever way of putting that; I like it!</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Are you accusing me of sinning for liking the good things in life? Wow, who's insecure now?</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
 					</CultHints>
 					<CultMentions>
 						<CultMention>
-							<Text></Text>
+							<Text>You know, my commune has been working on a pill to end all pills, a supplement for anything you could think of. The Chef Supreme is one of the best we could find on the deep web!</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>At least someone is taking risks in invention!</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Sounds literally as shady as it could get.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -741,12 +808,12 @@
 									<Text>Duuuuuuude. Polyrhythms are sick. I'll totally check them out.</Text>
 								</PosResponse>
 								<PosResponse>
-									<Text>I got to see Asgeir in concert! So amazing. If you're looking for other Scandinavian bands Kings of Convenience are good too.</Text>
+									<Text>I got to see Asgeir in concert! So amazing. If you're looking for other Scandinavian bands, Kings of Convenience are good too.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text>Umm.. Poly-what? I'm not really into multiple partners...</Text>
+									<Text>Umm.. Poly-what? I'm not really into, uh, that, relationship-wise</Text>
 								</NegResponse>
 								<NegResponse>
 									<Text>Polyrhythms kinda mess with my head. I can't do two time signatures at once.</Text>
@@ -783,6 +850,9 @@
 								<PosResponse>
 									<Text>I don't always understand them, but they always bring me piece.</Text>
 								</PosResponse>
+								<PosResponse>
+									<Text>It's uplifting, for sure. That's what it's made for, after all.</Text>
+								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
@@ -790,6 +860,9 @@
 								</NegResponse>
 								<NegResponse>
 									<Text>Not really my genre.</Text>
+								</NegResponse>
+								<NegResponse>
+									<Text>Too posh and lofty for me.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
@@ -815,40 +888,15 @@
 					</CultHints>
 					<CultMentions>
 						<CultMention>
-							<Text>Is there anyone who really understands the true sense of enlightenment than the Priests of the Temples of Syrinx?</Text>
+							<Text>Is there anyone who really understands the true sense of enlightenment than the Priests of the Temples of Syrinx? They keep spirits high in my establishment.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text>Entertainment Music Cult Mention 1 Pos 1</Text>
-								</PosResponse>
-								<PosResponse>
-									<Text>Entertainment Music Cult Mention 1 Pos 2</Text>
+									<Text>Ooo, I don't know them, but I'd love to listen to them sometime!</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text>Entertainment Music Cult Mention 1 Neg 1</Text>
-								</NegResponse>
-								<NegResponse>
-									<Text>Entertainment Music Cult Mention 1 Neg 2</Text>
-								</NegResponse>
-							</NegResponses>
-						</CultMention>
-						<CultMention>
-							<Text>Entertainment Music Cult Mention 2</Text>
-							<PosResponses>
-								<PosResponse>
-									<Text>Entertainment Music Cult Mention 2 Pos 1</Text>
-								</PosResponse>
-								<PosResponse>
-									<Text>Entertainment Music Cult Mention 2 Pos 2</Text>
-								</PosResponse>
-							</PosResponses>
-							<NegResponses>
-								<NegResponse>
-									<Text>Entertainment Music Cult Mention 2 Neg 1</Text>
-								</NegResponse>
-								<NegResponse>
-									<Text>Entertainment Music Cult Mention 2 Neg 2</Text>
+									<Text>Isn't that a song from like, ages ago?</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -861,12 +909,12 @@
 							<Text>Did you hear about that Bollywood movie, Padmaavat? Apparently it sparked a bunch of protests. Supposed to be a good movie though.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text>Yeah, it was all over the news. Apparently someone offered a bounty for beheading the main actress? But on the bright side, the music was good.</Text>
+									<Text>Yeah, it was all over the news... Apparently someone offered a bounty for beheading the main actress? But on the bright side, the music was good.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Bollywood? You mean Fake Hollywood?</Text>
 								</NegResponse>
 							</NegResponses>
 						</SmallTalk>
@@ -877,7 +925,7 @@
 									<Text>Wonder Woman. Hands down.</Text>
 								</PosResponse>
 								<PosResponse>
-									<Text>Hear me out. Ant-man. Paul Rudd is fantastic.</Text>
+									<Text>Hear me out. Ant-man. Paul Rudd is fantastic. And Edgar Wright??</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
@@ -886,6 +934,19 @@
 								</NegResponse>
 								<NegResponse>
 									<Text>Not really into action films. I prefer something with meaning.</Text>
+								</NegResponse>
+							</NegResponses>
+						</SmallTalk>
+						<SmallTalk>
+							<Text>Thoughts on the Golden Globes this year?</Text>
+							<PosResponses>
+								<PosResponse>
+									<Text>Good mix, good mix. Can't even pick a favorite!</Text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<Text>They should make globes out of something cheaper to mass produce?</Text>
 								</NegResponse>
 							</NegResponses>
 						</SmallTalk>
@@ -910,18 +971,31 @@
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
-					</CultHints>
-					<CultMentions>
-						<CultMention>
-							<Text></Text>
+						<CultHint>
+							<Text>If there was one actor you had to follow to the ends of the earth on a shunned but true mission under the leadership of those in the shadows, who would it be? Don't worry, there's more than one correct answer.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>Simon Pegg. Easy.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Mmmm, not feeling the specificity of this question....</Text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<Text>Some of my absolute favorite films have come from minds my organization has fostered. We have mentored many a mind in media.</Text>
+							<PosResponses>
+								<PosResponse>
+									<Text>Must be a good group to have so many ideas!</Text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<Text>I'm more into indie films.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -934,7 +1008,7 @@
 							<Text>Did you check out the Murakami exhibit at the MFA? Really neat combo of eccentric and traditional.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text>It was super cool! You should go back and listen to the soundtrack of Paprika while viewing the art. Really pairs well together.</Text>
+									<Text>It was super cool! You should go back and listen to the soundtrack of Paprika while viewing the art while there. They pair really well together.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
@@ -949,36 +1023,33 @@
 					</SmallTalks>
 					<CultHints>
 						<CultHint>
-							<Text></Text>
+							<Text>If art is the reflection of the soul, then what does yours show? Are you really on the right path?</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>I'm not sure if I'm on the right path, but I'll follow if you show me the way.</Text>
+								</PosResponse>
+								<PosResponse>
+									<Text>It is what it is. It probably just shows what others see of me, which would be relative.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Mine would be my soul, duh. Right there in the question, genius.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
 					</CultHints>
 					<CultMentions>
 						<CultMention>
-							<Text>If art is the reflection of the soul, then what does yours show? Are you really on the right path? </Text>
+							<Text> My commune is one of the greatest purveyors of art in the country, so much so it's been made out life motto and creed.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text>I'm not sure if I'm on the right path, but I'll follow if you show me the way.</Text>
-								</PosResponse>
-								<PosResponse>
-									<Text>positive Text goes here</Text>
+									<Text>Must be an extravagant collection you've seen. Jealous~</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text>I think my actions speak louder than your art.</Text>
-								</NegResponse>
-								<NegResponse>
-									<Text>That's a little intense.</Text>
+									<Text>That's a bit borderline National Treasure right there...</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -988,14 +1059,14 @@
 					<Name>Literature</Name>
 					<SmallTalks>
 						<SmallTalk>
-							<Text>Non-fiction or fiction?</Text>
+							<Text>Fiction or non-fiction?</Text>
 							<PosResponses>
 								<PosResponse>
 									<Text>Non-fiction. There's so much to learn about this world, why explore fictional ones?</Text>
 								</PosResponse>
 							</PosResponses>
 							<PosResponse>
-									<Text>Fiction. The stories and adventures are so much more exciting than real-life.</Text>
+									<Text>Fiction. The stories and adventures are so much more exciting in fiction than real-life!</Text>
 								</PosResponse>
 							<NegResponses>
 								<NegResponse>
@@ -1015,7 +1086,7 @@
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>I can't remember the last book I read, let alone the author.</Text>
 								</NegResponse>
 							</NegResponses>
 						</SmallTalk>
@@ -1025,27 +1096,27 @@
 							<Text>I think H. P. Lovecraft had the right idea with the Church of Starry Wisdom. The Esoteric Order of Dagon, mm, I appreciate the effort, but it fell a bit short.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>You're right about that. I've never met someone that knows more about Lovecraft than what's on their aesthetic T-shirt!</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>One certainly sounds prettier? There's that going for them, I guess.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultHint>
 					</CultHints>
 					<CultMentions>
 						<CultMention>
-							<Text></Text>
+							<Text>I've met Cthulhu. My commune has tea with him on holidays.</Text>
 							<PosResponses>
 								<PosResponse>
-									<Text></Text>
+									<Text>I feel I've always known this day would come.</Text>
 								</PosResponse>
 							</PosResponses>
 							<NegResponses>
 								<NegResponse>
-									<Text></Text>
+									<Text>Fake news.</Text>
 								</NegResponse>
 							</NegResponses>
 						</CultMention>
@@ -1053,12 +1124,4 @@
 				</Interest>
 			</Interests>
 	</Category>
-</Categories>
-
-
-
-
-						
-						
-						
-						
+</Categories>	

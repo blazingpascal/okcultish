@@ -8,9 +8,9 @@ public class ResponseSelectableImpl : AResponseSelectable
 {
 	Button button;
 
-	public void Start()
+	public void Awake()
 	{
-		this.button = GetComponentInChildren<Button>();
+		this.button = GetComponent<Button>() ?? GetComponentInChildren<Button>();
 	}
 
 	public override void SetReaction(UnityAction reaction)

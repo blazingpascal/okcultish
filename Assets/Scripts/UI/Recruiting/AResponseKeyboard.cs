@@ -13,10 +13,12 @@ public abstract class AResponseKeyboard : MonoBehaviour {
 	public AResponseSelectable joinCultSelectable;
 
 	private IRecruitingSession session;
+    private IGameManager manager;
 
 	// Use this for initialization
 	void Start()
 	{
+        manager = FindObjectOfType<GameManager>();
 		session = FindObjectOfType<GameManager>().CurrentRecruitingSession;
 		if(session == null)
 		{
@@ -57,6 +59,15 @@ public abstract class AResponseKeyboard : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+        SetUiInteractable(!manager.IsUiLocked);
 	}
+
+    private void SetUiInteractable(bool interactable)
+    {
+        complimentSelectable.GetComponentInChildren<Selectable>().interactable = interactable;
+        smallTalkSelectable.GetComponentInChildren<Selectable>().interactable = interactable;
+        mentionCultSelectable.GetComponentInChildren<Selectable>().interactable = interactable;
+        hintAtCultSelectable.GetComponentInChildren<Selectable>().interactable = interactable;
+        joinCultSelectable.GetComponentInChildren<Selectable>().interactable = interactable;
+    }
 }

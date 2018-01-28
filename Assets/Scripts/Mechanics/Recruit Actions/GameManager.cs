@@ -60,7 +60,9 @@ public class GameManager : MonoBehaviour, IGameManager
 	public long TimeRemaining { get; private set; }
 	public int CurrentRound { get; private set; }
 	public bool HasLost { get; private set; }
-	public bool IsRunning { get; private set; }
+    public bool IsRunning { get; private set; }
+    public bool IsUiLocked { get; set; }
+
 	internal IRecruitingSession CurrentRecruitingSession { get; set; }
 
 	public IUserProfile CurrentMatch
@@ -105,7 +107,7 @@ public class GameManager : MonoBehaviour, IGameManager
 		IsRunning = false;
 	}
 
-	void Update()
+/*	void Update()
 	{
 		TimeRemaining -= (long)(1000 * Time.deltaTime);
 		if (TimeRemaining <= 0)
@@ -128,7 +130,12 @@ public class GameManager : MonoBehaviour, IGameManager
 				roundOver = true;
 			}
 		}
-	}
+
+        if (IsUiLocked && Time.time >= unlockTime)
+        {
+            IsUiLocked = false;
+        }
+	}*/
 
 
 

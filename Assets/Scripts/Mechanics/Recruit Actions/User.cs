@@ -57,8 +57,8 @@ private User(String firstName, String lastName, Gender gender, int cultConversio
 
 	public static User UserGenerator(Random random) {
 		Gender gender = random.Next (2) == 0 ? Gender.Male : Gender.Female;
-		return new User ((gender == Gender.Female ? femaleFirstNameSelector.getRandomItem() : maleFirstNameSelector.getRandomItem()),
-			lastNameSelector.getRandomItem (),
+		return new User ((gender == Gender.Female ? femaleFirstNameSelector.GetRandomItem() : maleFirstNameSelector.GetRandomItem()),
+			lastNameSelector.GetRandomItem (),
 			gender,
 			random.Next (MAX_START_CONVERSION_CHANCE - MIN_START_CONVERSION_CHANCE) + MIN_START_CONVERSION_CHANCE);
 	}

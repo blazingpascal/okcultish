@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using UnityEditor;
-
-public class MessageImpl : IMessage
+﻿internal class MessageImpl : IMessage
 {
     private string msg;
 

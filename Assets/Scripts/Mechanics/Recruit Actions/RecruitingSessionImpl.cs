@@ -25,7 +25,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         this.gameManager = manager;
     }
 
-    public void complimentRecruit(System.Random r)
+    public void ComplimentRecruit(Random r)
     {
         IMessage msg = GenerateCompliment(r);
         platform.AddPlayerMessage(msg);
@@ -35,7 +35,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     }
 
-    public void smallTalkRecruit(System.Random r)
+    public void SmallTalkRecruit(Random r)
     {
         Interest interest = playerProfile.GetRandomInterest(r);
         IMessage msg = GenerateSmallTalk(r, interest);
@@ -46,7 +46,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? SMALL_TALK_RECRUIT_DELTA_SUCCESS : SMALL_TALK_RECRUIT_DELTA_FAIL);
     }
 
-    public void mentionCultToRecruit(Random r)
+    public void MentionCultToRecruit(Random r)
     {
         Interest interest = playerProfile.GetRandomInterest(r);
         IMessage msg = GenerateCultMention(r, interest);
@@ -58,7 +58,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_MENTION_DELTA_SUCCEED : CULT_MENTION_DELTA_FAIL);
     }
 
-    public void hintAtCultToRecruit(System.Random r)
+    public void HintAtCultToRecruit(Random r)
     {
         Interest interest = playerProfile.GetRandomInterest(r);
         IMessage msg = GenerateCultHint(r, interest);
@@ -70,7 +70,7 @@ public class RecruitingSessionImpl : IRecruitingSession
         currentRecruitProfile.GetUser().ChangeConversionChance(success ? CULT_HINT_DELTA_SUCCEED : CULT_HINT_DELTA_FAIL);
     }
 
-    public void askToJoinCult(System.Random r)
+    public void AskToJoinCult(Random r)
     {
         IMessage msg = GenerateJoinCultMessage(r);
         int roll = r.Next(INTEREST_MAX);
@@ -80,29 +80,29 @@ public class RecruitingSessionImpl : IRecruitingSession
         platform.AddResponse(response, success);
         if (success)
         {
-            this.gameManager.IncrementRecruitCount();
+            gameManager.IncrementRecruitCount();
         }
         //this.cultConversionChance = -1;
     }
 
-    public IMessage GenerateCompliment(System.Random r)
+    public IMessage GenerateCompliment(Random r)
     {
-        return new MessageImpl(ComplimentGenerator.GenerateCompliment(r));
+        return new MessageImpl(MessageGenerator.GenerateCompliment(r));
     }
 
-    public IMessage GenerateSmallTalk(System.Random r, Interest interest)
+    public IMessage GenerateSmallTalk(Random r, Interest interest)
     {
         // TODO
         return new TestMessage("How do you feel about " + interest.ToString());
     }
 
-    public IMessage GenerateCultMention(System.Random r, Interest interest)
+    public IMessage GenerateCultMention(Random r, Interest interest)
     {
         // TODO
         return new TestMessage("Do you think you could win a cage match with Jesus?");
     }
 
-    public IMessage GenerateJoinCultMessage(System.Random r)
+    public IMessage GenerateJoinCultMessage(Random r)
     {
         // TODO
         return new TestMessage("Hey, wanna join my cult?");
@@ -129,7 +129,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     private IMessage GenerateAbortMessage(Random r)
     {
-        return new TestMessage("Sorry, I need to go wash my hair.");
+        return new MessageImpl(MessageGenerator.GenerateAbort(r));
     }
 
     public bool IsOver

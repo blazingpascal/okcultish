@@ -10,7 +10,7 @@ public class TestRunner : MonoBehaviour
 	{
 		User user1 = User.UserGenerator (random);
 		for (int i = 0; i < 10; i++) {
-			print (ComplimentGenerator.GenerateCompliment (random));
+			print (MessageGenerator.GenerateCompliment (random));
 		}
 		print ("HELLO");
 	}

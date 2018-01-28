@@ -95,16 +95,12 @@ public class RecruitingSessionImpl : IRecruitingSession
 
     public IMessage GenerateSmallTalk(Random r, Interest interest)
     {
-        // TODO
-        return new TestMessage("How do you feel about " + interest.ToString());
-        //return new TestMessage(InterestsHandler.SmallTalkMessage(r, interest));
-
+        return new MessageImpl(InterestsHandler.SmallTalkMessage(r, interest));
     }
 
     public IMessage GenerateCultMention(Random r, Interest interest)
     {
-        // TODO
-        return new TestMessage("Do you think you could win a cage match with Jesus?");
+        return new MessageImpl(InterestsHandler.CultMentionMessage(r, interest));
     }
 
     public IMessage GenerateJoinCultMessage(Random r)
@@ -118,10 +114,9 @@ public class RecruitingSessionImpl : IRecruitingSession
         this.platform = p;
     }
 
-    public IMessage GenerateCultHint(Random r, Interest i)
+    public IMessage GenerateCultHint(Random r, Interest interest)
     {
-        // TODO
-        return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
+        return new MessageImpl(InterestsHandler.CultHintMessage(r, interest));
     }
 
 

@@ -75,4 +75,26 @@ public class InterestsHandler {
             .ToList();
         return smallTalkStrings[r.Next(smallTalkStrings.Count)];
     }
+
+    public static string CultHintMessage(Random r, Interest interest)
+    {
+        string xpath = String.Format("Categories/Category[Name = \"{0}\"]/Interests/Interest[Name = \"{1}\"]/CultHints/CultHint/Text", interest.Category, interest.SpecificInterest);
+        XmlNodeList hints = data.SelectNodes(xpath);
+        List<String> hintStrings = hints
+            .Cast<XmlNode>()
+            .Select(node => node.InnerText)
+            .ToList();
+        return hintStrings[r.Next(hintStrings.Count)];
+    }
+
+    public static string CultMentionMessage(Random r, Interest interest)
+    {
+        string xpath = String.Format("Categories/Category[Name = \"{0}\"]/Interests/Interest[Name = \"{1}\"]/CultMentions/CultMention/Text", interest.Category, interest.SpecificInterest);
+        XmlNodeList mentions = data.SelectNodes(xpath);
+        List<String> mentionStrings = mentions
+            .Cast<XmlNode>()
+            .Select(node => node.InnerText)
+            .ToList();
+        return mentionStrings[r.Next(mentionStrings.Count)];
+    }
 }

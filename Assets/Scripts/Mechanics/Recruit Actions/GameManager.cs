@@ -1,16 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour, IGameManager
 {
 	private const int QUOTA_INCREASE_PER_ROUND = 1;
-	private const long MS_PER_ROUND = 2 * 60 * 1000;
+	private const long MS_PER_ROUND = (long)(0.5 * 60 * 1000);
 	private const int MS_INCREASE_PER_ROUND = 0;
 
 	private IPlayerProfile playerProfile = new TestProfile();
 	private UserProfile currentMatch;
 	private GameState gameState;
+	private bool roundOver = false;
 
 	internal void SetMessagingPlatform(MessagingPlatformViewImpl messagingPlatformViewImpl)
 	{
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour, IGameManager
 			{
 				gameState = value;
 				SwitchToScene(gameState);
+
 			}
 		}
 	}
@@ -111,25 +112,33 @@ public class GameManager : MonoBehaviour, IGameManager
 		{
 			HasLost = ScoreForRound < Quota;
 			IsRunning = false;
-			if (HasLost)
+
+			if (!roundOver)
 			{
-				GameState = GameState.Losing;
-			}
-			else
-			{
-				GameState = GameState.Awarded;
+				if (HasLost)
+				{
+					GameState = GameState.Losing;
+
+				}
+				else
+				{
+					GameState = GameState.Awarded;
+				}
+				TotalScore += ScoreForRound;
+				roundOver = true;
 			}
 		}
-		
 	}
+
+
 
 	public void InitNewRound()
 	{
 		CurrentRound++;
-		TotalScore += ScoreForRound;
 		ScoreForRound = 0;
 		Quota += QUOTA_INCREASE_PER_ROUND;
 		TimeRemaining = MS_PER_ROUND + MS_INCREASE_PER_ROUND * CurrentRound;
+		roundOver = false;
 
 	}
 

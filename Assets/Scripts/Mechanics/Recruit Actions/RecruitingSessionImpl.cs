@@ -23,6 +23,9 @@ public class RecruitingSessionImpl : IRecruitingSession
         this.playerProfile = playerProfile;
         this.platform = platform;
         this.gameManager = manager;
+        var foo = InterestsHandler.GetCategories();
+        var bar = InterestsHandler.GetAllInterests();
+
     }
 
     public void ComplimentRecruit(Random r)
@@ -94,6 +97,8 @@ public class RecruitingSessionImpl : IRecruitingSession
     {
         // TODO
         return new TestMessage("How do you feel about " + interest.ToString());
+        //return new TestMessage(InterestsHandler.SmallTalkMessage(r, interest));
+
     }
 
     public IMessage GenerateCultMention(Random r, Interest interest)

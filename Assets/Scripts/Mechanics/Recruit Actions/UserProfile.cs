@@ -54,15 +54,7 @@ public class UserProfile : IUserProfile
 
     public static UserProfile UserProfileGenerator(Random random)
     {
-        // TODO: Replace with real interests
-        List<Interest> interests = new List<Interest>
-        {
-            new Interest("Entertainment", "80s Avante Garde French Film"),
-            new Interest("Health", "Veganism"),
-            new Interest("Athletics", "Deeply Uncomfortable Aerobics")
-        };
-
-        return new UserProfile(User.UserGenerator(random), interests);
+        return new UserProfile(User.UserGenerator(random), InterestsHandler.GetAllInterests());
     }
 
     public IMessage GenerateAbortResponse(Random r)

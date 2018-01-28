@@ -1,27 +1,27 @@
 ﻿public class Interest
 {
-	private string category;
-	private string specificInterest;
+	public string Category { get; private set; }
+	public string SpecificInterest { get; private set; }
 
 	public Interest(string category, string specificInterest)
 	{
-		this.category = category;
-		this.specificInterest = specificInterest;
+		this.Category = category;
+		this.SpecificInterest = specificInterest;
 	}
 
 	public override string ToString()
 	{
-		return specificInterest;
+		return SpecificInterest;
 	}
 
 	public override int GetHashCode()
 	{
-		return category.GetHashCode() * 3 + category.GetHashCode() * 7;
+		return Category.GetHashCode() * 3 + Category.GetHashCode() * 7;
 	}
 
 	public override bool Equals(object obj)
 	{
-		return obj is Interest && ((Interest)obj).category.Equals(category) 
-			&& ((Interest)obj).specificInterest.Equals(specificInterest);
+		return obj is Interest && ((Interest)obj).Category.Equals(Category) 
+			&& ((Interest)obj).SpecificInterest.Equals(SpecificInterest);
 	}
 }

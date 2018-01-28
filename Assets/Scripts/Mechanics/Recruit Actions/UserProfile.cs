@@ -37,8 +37,7 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateComplimentResponse(System.Random r)
     {
-        // TODO
-        return new MessageImpl("Thanks! <3");
+        return new MessageImpl(MessageGenerator.GenerateComplimentResponse(r, user.GetConversionChance()));
     }
 
     public IMessage GenerateCultHintResponse(System.Random r, bool success, Interest interest)
@@ -53,7 +52,7 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateJoinCultResponse(System.Random r, bool success)
     {
-        return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
+        return new MessageImpl(MessageGenerator.GenerateJoinCultResponse(r, success));
     }
 
     public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)

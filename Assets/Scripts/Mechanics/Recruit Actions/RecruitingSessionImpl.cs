@@ -105,17 +105,15 @@ public class RecruitingSessionImpl : IRecruitingSession
 		return new MessageImpl(MessageGenerator.GenerateCompliment(r));
 	}
 
-	public IMessage GenerateSmallTalk(Random r, Interest interest)
-	{
-		// TODO
-		return new TestMessage("How do you feel about " + interest.ToString());
-	}
+    public IMessage GenerateSmallTalk(Random r, Interest interest)
+    {
+        return new MessageImpl(InterestsHandler.GeneratSmallTalkMessage(r, interest));
+    }
 
-	public IMessage GenerateCultMention(Random r, Interest interest)
-	{
-		// TODO
-		return new TestMessage("Do you think you could win a cage match with Jesus?");
-	}
+    public IMessage GenerateCultMention(Random r, Interest interest)
+    {
+        return new MessageImpl(InterestsHandler.GenerateCultMentionMessage(r, interest));
+    }
 
 	public IMessage GenerateJoinCultMessage(Random r)
 	{
@@ -128,11 +126,10 @@ public class RecruitingSessionImpl : IRecruitingSession
 		this.platform = p;
 	}
 
-	public IMessage GenerateCultHint(Random r, Interest i)
-	{
-		// TODO
-		return new TestMessage("Do you like hanging out with your friends? I love hanging with my friends.");
-	}
+    public IMessage GenerateCultHint(Random r, Interest interest)
+    {
+        return new MessageImpl(InterestsHandler.GenerateCultHintMessage(r, interest));
+    }
 
 
 	public void Abort(Random r)

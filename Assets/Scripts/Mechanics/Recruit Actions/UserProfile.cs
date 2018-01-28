@@ -30,26 +30,23 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateCultHintResponse(System.Random r, bool success, Interest interest)
     {
-        // TODO
-        return new MessageImpl(success ? "Oh, tell me more" : "uh ok");
+        return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateCultMentionResponse(System.Random r, bool success, Interest interest)
     {
-        // TODO
-        return new MessageImpl(success ? "That's really interesting" : "...");
+        return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateJoinCultResponse(System.Random r, bool success)
     {
-        // TODO
-        return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
+		return new MessageImpl("Join Cult Plz TODO");
     }
 
     public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)
     {
         // TODO
-        return new MessageImpl(success ? "I too am interested in this" : "k.");
+        return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
     }
 
     public bool InterestedIn(Interest interest)
@@ -64,14 +61,12 @@ public class UserProfile : IUserProfile
 
     public static UserProfile UserProfileGenerator(System.Random random)
     {
-        // TODO: Replace with real interests
-        List<Interest> interests = new List<Interest>
+        int interestCount = 3;
+        List<Interest> interests = new List<Interest>();
+        for (int i=0; i<interestCount; i++)
         {
-            new Interest("Entertainment", "80s Avante Garde French Film"),
-            new Interest("Health", "Veganism"),
-            new Interest("Music", "Third Century Rock Opera")
-        };
-
+            interests.Add(InterestsHandler.GetRandomInterest(random));
+        }
         return new UserProfile(User.UserGenerator(random), interests);
     }
 

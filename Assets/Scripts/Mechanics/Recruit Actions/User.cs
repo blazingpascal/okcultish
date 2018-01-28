@@ -30,6 +30,14 @@ public class User : IUser
 		}
 	}
 
+	public Gender Gender
+	{
+		get
+		{
+			return this.gender;
+		}
+	}
+
 	private User(String firstName, String lastName, Gender gender, int cultConversionChance, double distance)
 	{
 		this.firstName = firstName;

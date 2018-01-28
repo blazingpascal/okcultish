@@ -10,4 +10,5 @@ public interface IUser
     int GetConversionChance();
     void ChangeConversionChance(int delta);
 	double Distance { get; }
+	Gender Gender { get; }
 }

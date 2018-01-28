@@ -55,12 +55,7 @@ public class MinimalRecruitingSessionView : MonoBehaviour
     {
         public Interest GetRandomInterest(System.Random r)
         {
-            int roll = r.Next(100);
-            if (roll < 50)
-            {
-                return new Interest("Athletics", "Watching Sports");
-            }
-            return new Interest("Religion", "Scientology");
+            return InterestsHandler.GetRandomInterest(r);
 
         }
     }

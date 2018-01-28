@@ -17,7 +17,7 @@ public class PlayerProfileViewImpl : MonoBehaviour
 	{
 		this.profile = profile;
 		IUser user = profile.GetUser();
-		fullNameAndGenderText.text = user.GetFullName();
+		fullNameAndGenderText.text = user.GetFullName() + ", " + user.Gender;
 		distanceText.text = string.Format("{0:0.0} miles away",user.Distance);
 		interestBox.text = GetInterestText(profile.Interests);
 		Sprite sprite = profile.LoadPicture();

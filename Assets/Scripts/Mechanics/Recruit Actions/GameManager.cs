@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour, IGameManager
 	public int CurrentRound { get; private set; }
 	public bool HasLost { get; private set; }
     public bool IsRunning { get; private set; }
+	internal IRecruitingSession CurrentRecruitingSession { get; set; }
 
 	public GameManager()
 	{

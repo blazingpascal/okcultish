@@ -56,7 +56,6 @@ public class MinimalRecruitingSessionView : MonoBehaviour
         public Interest GetRandomInterest(System.Random r)
         {
             return InterestsHandler.GetRandomInterest(r);
-
         }
     }
 

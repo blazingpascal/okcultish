@@ -7,12 +7,11 @@ public class TestProfile : IPlayerProfile
 
 	public TestProfile()
 	{
+		Random r = new Random();
 		interests = new List<Interest>();
 		for(int i = 0; i < 3; i++)
 		{
-			interests.Add(InterestsHandler.GetRandomInterest(new Random()));
-			interests.Add(InterestsHandler.GetRandomInterest(new Random()));
-			interests.Add(InterestsHandler.GetRandomInterest(new Random()));
+			interests.Add(InterestsHandler.GetRandomInterest(new Random(r.Next())));
 		}
 	}
 

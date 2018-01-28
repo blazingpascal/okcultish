@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public abstract class AResponseKeyboard : MonoBehaviour {
+public abstract class AResponseKeyboard : MonoBehaviour
+{
 	public AResponseSelectable complimentSelectable;
 	public AResponseSelectable smallTalkSelectable;
 	public AResponseSelectable mentionCultSelectable;
@@ -13,50 +14,53 @@ public abstract class AResponseKeyboard : MonoBehaviour {
 	public AResponseSelectable joinCultSelectable;
 
 	private IRecruitingSession session;
+	private System.Random random = new System.Random();
 
 	// Use this for initialization
 	void Start()
 	{
 		session = FindObjectOfType<GameManager>().CurrentRecruitingSession;
-		if(session == null)
+		if (session == null)
 		{
-			session = new RecruitingSessionImpl(UserProfile.UserProfileGenerator(new System.Random()), 
+			session = new RecruitingSessionImpl(UserProfile.UserProfileGenerator(new System.Random()),
 				new TestProfile(), FindObjectOfType<AMessagingPlatformView>(), FindObjectOfType<GameManager>());
 		}
+		joinCultSelectable.SetReaction(JoinCult);
 		complimentSelectable.SetReaction(Compliment);
 		smallTalkSelectable.SetReaction(SmallTalk);
 		mentionCultSelectable.SetReaction(MentionCult);
 		hintAtCultSelectable.SetReaction(HintAtCult);
-		joinCultSelectable.SetReaction(JoinCult);
+
 	}
 
 	private void JoinCult()
 	{
-		session.AskToJoinCult(new System.Random());
+		session.AskToJoinCult(new System.Random(random.Next()));
 	}
 
 	private void HintAtCult()
 	{
-		session.HintAtCultToRecruit(new System.Random());
+		session.HintAtCultToRecruit(new System.Random(random.Next()));
 	}
 
 	private void MentionCult()
 	{
-		session.MentionCultToRecruit(new System.Random());
+		session.MentionCultToRecruit(new System.Random(random.Next()));
 	}
 
 	private void SmallTalk()
 	{
-		session.SmallTalkRecruit(new System.Random());
+		session.SmallTalkRecruit(new System.Random(random.Next()));
 	}
 
 	private void Compliment()
 	{
-		session.ComplimentRecruit(new System.Random());
+		session.ComplimentRecruit(new System.Random(random.Next()));
 	}
 
 	// Update is called once per frame
-	void Update () {
-		
+	void Update()
+	{
+
 	}
 }

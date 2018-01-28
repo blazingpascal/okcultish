@@ -82,7 +82,7 @@ public class RecruitingSessionImpl : IRecruitingSession
 		}
 	}
 
-	public void AskToJoinCult(Random r)
+	public void AskToJoinCult(System.Random r)
 	{
 		IMessage msg = GenerateJoinCultMessage(r);
 		int roll = r.Next(INTEREST_MAX);

@@ -9,6 +9,22 @@ public class MessagingPlatformViewImpl : AMessagingPlatformView
 	public ScrollRect messageHolder;
 	public AMessageView playerMessageView;
 	public AMessageView recruitMessageView;
+	private GameManager gm;
+
+	public void Start()
+	{
+		gm = FindObjectOfType<GameManager>();
+		if(gm != null)
+		{
+			gm.SetMessagingPlatform(this);
+		}
+		abortSelectable.SetReaction(Abort);
+	}
+
+	private void Abort()
+	{
+		gm.GameState = GameState.Swiping;
+	}
 
 	public override void AddPlayerMessage(IMessage message)
 	{

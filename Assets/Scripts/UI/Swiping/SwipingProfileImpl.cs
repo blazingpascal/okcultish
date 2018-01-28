@@ -5,20 +5,25 @@ using UnityEngine.UI;
 
 public class SwipingProfileImpl : MonoBehaviour
 {
+	private GameManager manager;
 	public PlayerProfileViewImpl playerProfile;
 	public Button acceptButton;
 	public Button rejectButton;
+	private IUserProfile potentialRecruitProfile;
 
 	public void Start()
 	{
 		LoadNewProfile();
 		acceptButton.onClick.AddListener(Accept);
 		rejectButton.onClick.AddListener(Reject);
+		manager = FindObjectOfType<GameManager>();
 	}
 
 	private void LoadNewProfile()
 	{
-		LoadProfile(UserProfile.UserProfileGenerator(new System.Random()));
+		IUserProfile userProfile = UserProfile.UserProfileGenerator(new System.Random());
+		LoadProfile(userProfile);
+		this.potentialRecruitProfile = userProfile;
 	}
 
 	private void Reject()
@@ -28,7 +33,8 @@ public class SwipingProfileImpl : MonoBehaviour
 
 	private void Accept()
 	{
-		LoadNewProfile();
+		manager.CurrentMatch = this.potentialRecruitProfile;
+		manager.GameState = GameState.Recruiting;
 	}
 
 	public void LoadProfile(IUserProfile profile)

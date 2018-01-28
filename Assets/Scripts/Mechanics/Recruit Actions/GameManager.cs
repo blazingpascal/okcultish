@@ -17,7 +17,23 @@ public class GameManager : MonoBehaviour, IGameManager
     public bool IsRunning { get; private set; }
 	internal IRecruitingSession CurrentRecruitingSession { get; set; }
 
-	public GameManager()
+    public int SecondsLeft
+    {
+        get
+        {
+            return (int)TimeRemaining / 1000;
+        }
+    }
+
+    public int TotalTime
+    {
+        get
+        {
+            return (int)MS_PER_ROUND / 1000;
+        }
+    }
+
+    public GameManager()
 	{
 
 	}

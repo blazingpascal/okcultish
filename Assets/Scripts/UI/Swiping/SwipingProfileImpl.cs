@@ -1,6 +1,7 @@
 ﻿
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SwipingProfileImpl : MonoBehaviour
@@ -10,6 +11,11 @@ public class SwipingProfileImpl : MonoBehaviour
 	public Button acceptButton;
 	public Button rejectButton;
 	private IUserProfile potentialRecruitProfile;
+
+	public void Awake()
+	{
+		SceneManager.LoadScene(4, LoadSceneMode.Additive);
+	}
 
 	public void Start()
 	{

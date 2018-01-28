@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour, IGameManager
 {
 	private const int QUOTA_INCREASE_PER_ROUND = 1;
-	private const long MS_PER_ROUND = 30000;
+	private const long MS_PER_ROUND = 2 * 60 * 1000;
 	private const int MS_INCREASE_PER_ROUND = 0;
 
 	private IPlayerProfile playerProfile = new TestProfile();
@@ -39,6 +39,12 @@ public class GameManager : MonoBehaviour, IGameManager
 				break;
 			case GameState.Recruiting:
 				SceneManager.LoadScene(1);
+				break;
+			case GameState.Losing:
+				SceneManager.LoadScene(2);
+				break;
+			case GameState.Awarded:
+				SceneManager.LoadScene(3);
 				break;
 			default:
 				break;
@@ -103,12 +109,21 @@ public class GameManager : MonoBehaviour, IGameManager
 		TimeRemaining -= (long)(1000 * Time.deltaTime);
 		if (TimeRemaining <= 0)
 		{
-			HasLost = ScoreForRound >= Quota;
+			HasLost = ScoreForRound < Quota;
 			IsRunning = false;
+			if (HasLost)
+			{
+				GameState = GameState.Losing;
+			}
+			else
+			{
+				GameState = GameState.Awarded;
+			}
 		}
+		
 	}
 
-	private void InitNewRound()
+	public void InitNewRound()
 	{
 		CurrentRound++;
 		TotalScore += ScoreForRound;

@@ -53,6 +53,22 @@ public class MinimalRecruitingSessionView : MonoBehaviour
 
     private class TestPlayerProfile : IPlayerProfile
     {
+        public string CultName
+        {
+            get
+            {
+                return "Awesome Cult";
+            }
+        }
+
+        public CultStyle CultStyle
+        {
+            get
+            {
+                return CultStyle.BLUE_FLAG;
+            }
+        }
+
         public Interest GetRandomInterest(System.Random r)
         {
             return InterestsHandler.GetRandomInterest(r);

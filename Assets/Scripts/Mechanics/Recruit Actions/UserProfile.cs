@@ -14,8 +14,8 @@ public class UserProfile : IUserProfile
     private const string FEMALE_IMAGES_PATH = @"images/profile_images/female_portraits/";
     private const string MALE_IMAGES_PATH = @"images/profile_images/male_portraits/";
 
-    private static List<String> male_filenames = new List<String>(System.IO.Directory.GetFiles(RESOURCES_PATH + MALE_IMAGES_PATH));
-    private static List<String> female_filenames = new List<String>(System.IO.Directory.GetFiles(RESOURCES_PATH + FEMALE_IMAGES_PATH));
+    private static List<String> male_filenames = new List<String>(Directory.GetFiles(RESOURCES_PATH + MALE_IMAGES_PATH));
+    private static List<String> female_filenames = new List<String>(Directory.GetFiles(RESOURCES_PATH + FEMALE_IMAGES_PATH));
 
 	public ICollection<Interest> Interests
 	{
@@ -43,25 +43,21 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateCultHintResponse(System.Random r, bool success, Interest interest)
     {
-		// TODO
 		return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateCultMentionResponse(System.Random r, bool success, Interest interest)
     {
-		// TODO
 		return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
 	}
 
     public IMessage GenerateJoinCultResponse(System.Random r, bool success)
     {
-        // TODO
         return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
     }
 
     public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)
     {
-		// TODO
 		return new MessageImpl(InterestsHandler.GenerateSmallTalkResponseMessage(r, success, interest));
     }
 
@@ -89,10 +85,8 @@ public class UserProfile : IUserProfile
         String filename = user.Gender == Gender.Female ?
             female_filenames[random.Next(female_filenames.Count)] :
             male_filenames[random.Next(male_filenames.Count)];
-        // filename = "1237118_10151657162489067_694647709_n"; // FIXME
-        filename = Path.GetFileNameWithoutExtension(filename);
 
-        return new UserProfile(user, interests, filename);
+        return new UserProfile(user, interests, Path.GetFileNameWithoutExtension(filename));
     }
 
     public IMessage GenerateAbortResponse(System.Random r)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -63,6 +64,19 @@ public class MinimalRecruitingSessionView : MonoBehaviour
     {
         User user = User.UserGenerator(new System.Random());
         Interest[] interests = { new Interest("Athletics", "Watching Sports"), new Interest("Entertainment", "Art") };
+
+		public ICollection<Interest> Interests
+		{
+			get
+			{
+				HashSet<Interest> interests = new HashSet<Interest>();
+				foreach(Interest i in this.interests)
+				{
+					interests.Add(i);
+				}
+				return interests;
+			}
+		}
 
         public Sprite Image
         {
@@ -134,6 +148,11 @@ public class MinimalRecruitingSessionView : MonoBehaviour
             }
             return false;
         }
-    }
+
+		public Sprite LoadPicture()
+		{
+			return new Sprite();
+		}
+	}
 }
 

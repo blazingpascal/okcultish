@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UserProfile : IUserProfile
 {
@@ -15,8 +16,16 @@ public class UserProfile : IUserProfile
     private static List<String> male_filenames = new List<String>(System.IO.Directory.GetFiles(RESOURCES_PATH + MALE_IMAGES_PATH));
     private static List<String> female_filenames = new List<String>(System.IO.Directory.GetFiles(RESOURCES_PATH + FEMALE_IMAGES_PATH));
 
-    private UserProfile (IUser user, ICollection<Interest> interests, string imageFilename)
+	public ICollection<Interest> Interests
 	{
+		get
+		{
+			return interests;
+		}
+	}
+
+    private UserProfile(IUser user, ICollection<Interest> interests, string imageFilename)
+    {
         this.user = user;
         this.interests.UnionWith(interests);
 
@@ -33,23 +42,26 @@ public class UserProfile : IUserProfile
 
     public IMessage GenerateCultHintResponse(System.Random r, bool success, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
+		// TODO
+		return new MessageImpl(InterestsHandler.GenerateCultHintResponseMessage(r, success, interest));
     }
 
     public IMessage GenerateCultMentionResponse(System.Random r, bool success, Interest interest)
     {
-        return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
-    }
-
-    public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)
-    {
-        return new MessageImpl(InterestsHandler.GenerateSmallTalkResponseMessage(r, success, interest));
-    }
+		// TODO
+		return new MessageImpl(InterestsHandler.GenerateCultMentionResponseMessage(r, success, interest));
+	}
 
     public IMessage GenerateJoinCultResponse(System.Random r, bool success)
     {
         // TODO
         return new MessageImpl(success ? "Yes I will join your cult" : "No I will not join your weird cult");
+    }
+
+    public IMessage GenerateSmallTalkResponse(System.Random r, bool success, Interest interest)
+    {
+		// TODO
+		return new MessageImpl(InterestsHandler.GenerateSmallTalkResponseMessage(r, success, interest));
     }
 
     public bool InterestedIn(Interest interest)
@@ -84,5 +96,10 @@ public class UserProfile : IUserProfile
     {
         return new MessageImpl("lolno");
     }
+
+	public Sprite LoadPicture()
+	{
+		return null;
+	}
 }
 

@@ -15,7 +15,23 @@ public class TestProfile : IPlayerProfile
 		}
 	}
 
-	public Interest GetRandomInterest(Random r)
+    public string CultName
+    {
+        get
+        {
+            return "Really Good Cult";
+        }
+    }
+
+    public CultStyle CultStyle
+    {
+        get
+        {
+            return CultStyle.RED_FLAG;
+        }
+    }
+
+    public Interest GetRandomInterest(Random r)
 	{
 		return interests[r.Next(interests.Count)];
 	}

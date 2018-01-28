@@ -41,6 +41,12 @@ public class InterestsHandler {
                     .ToList();
     }
 
+    public static string GetSpecificInterestInCategory(Random random, string category)
+    {
+        List<String> interestsForCategory = GetInterestsForCategory(category);
+        return interestsForCategory[random.Next(interests.Count)];
+    }
+
     public static List<Interest> GetAllInterests()
     {
         if (interests != null)

@@ -30,19 +30,11 @@ public Gender Gender { get; private set; }
 		}
 	}
 
-	public Gender Gender
-	{
-		get
-		{
-			return this.gender;
-		}
-	}
-
 	private User(String firstName, String lastName, Gender gender, int cultConversionChance, double distance)
 	{
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.gender = gender;
+		this.Gender = gender;
 		this.cultConversionChance = cultConversionChance;
 		this.distance = distance;
 	}

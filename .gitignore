@@ -28,7 +28,10 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 
-
+# builds
+*.zip
+*.dll
+*.exe
 
 
 # Unity3D Generated File On Crash Reports

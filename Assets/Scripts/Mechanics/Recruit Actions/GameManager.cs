@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour, IGameManager
 	public long TimeRemaining { get; private set; }
 	public int CurrentRound { get; private set; }
 	public bool HasLost { get; private set; }
+    public bool IsRunning { get; private set; }
 
 	public GameManager()
 	{
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour, IGameManager
 		ScoreForRound = 0;
 		InitNewRound();
 		HasLost = false;
+        IsRunning = false;
 	}
 
 	void Update()
@@ -34,28 +36,8 @@ public class GameManager : MonoBehaviour, IGameManager
 		if (TimeRemaining <= 0)
 		{
 			HasLost = ScoreForRound >= Quota;
+            IsRunning = false;
 		}
-	}
-
-	public void SetCurrentMatch(UserProfile match)
-	{
-		currentMatch = match;
-	}
-
-	public void IncrementScore()
-	{
-		ScoreForRound++;
-	}
-
-	public bool TryToRecruit()
-	{
-		bool success = currentMatch.User.tryToConvert();
-		if (success)
-		{
-			ScoreForRound++;
-		}
-		currentMatch = null;
-		return success;
 	}
 
 	private void InitNewRound()
@@ -70,6 +52,11 @@ public class GameManager : MonoBehaviour, IGameManager
 
 	public void IncrementRecruitCount()
 	{
-		this.IncrementScore();
-	}
+        ScoreForRound++;
+    }
+
+    public void EndGame(bool succeeded)
+    {
+        IsRunning = false;
+    }
 }

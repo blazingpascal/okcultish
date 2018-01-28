@@ -16,7 +16,7 @@ public class RandomSelector
 		}
 	}
 
-	public String getRandomItem()
+	public String GetRandomItem()
 	{
 		return items[random.Next(items.Count)];
 	}

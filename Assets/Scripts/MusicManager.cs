@@ -13,8 +13,7 @@ public class MusicManager : MonoBehaviour
 
     void Awake()
     {
-        var foo = GetComponent<AudioSource>().clip.name;
-        if (instance != null
+        if (instance != null && instance != this
             && GetComponent<AudioSource>().clip.name.Equals(instance.GetComponent<AudioSource>().clip.name))
         {
             Destroy(gameObject);
@@ -22,9 +21,7 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            string bar;
             if (instance != null) {
-                bar = instance.GetComponent<AudioSource>().clip.name;
                 instance.GetComponent<AudioSource>().Stop();
             }
             GetComponent<AudioSource>().Play();

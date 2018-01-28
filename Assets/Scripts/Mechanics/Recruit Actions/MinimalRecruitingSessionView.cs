@@ -74,11 +74,6 @@ public class MinimalRecruitingSessionView : MonoBehaviour
             return InterestsHandler.GetRandomInterest(r);
 
         }
-
-        public void SetInterestCategories(List<string> categories)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     private class TestUserProfile : IUserProfile

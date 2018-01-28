@@ -36,9 +36,4 @@ public class TestProfile : IPlayerProfile
 	{
 		return interests[r.Next(interests.Count)];
 	}
-
-    public void SetInterestCategories(List<string> categories)
-    {
-        throw new NotImplementedException();
-    }
 }

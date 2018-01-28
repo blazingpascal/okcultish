@@ -1,0 +1,1058 @@
+<Categories>
+	<Category>
+		<Name>Academics</Name>
+			<Interests>
+				<Interest>
+					<Name>Science</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Have you heard that Ford has created an autonomous police car that can issue tickets?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Sounds like Robo-cop waiting to happen haha</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Think I can still flirt with it and get away with only a warning?</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>That sounds dangerous. I mean, automated law enforcement.</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Great. Just what I need. More speeding tickets.</text>
+								</NegResponse>
+							</NegResponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>A quantum computing scientist was named Australian of the Year. What a time to be alive.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Nice to see scientists getting recognition!</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Wasn't that Michelle Simmons? She's a boss.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Should have been Hugh Jackman.</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Should have been the Hugo Award. Quantum computing is just science fiction.</text>
+								</NegResponse>
+							</NegResponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>Do you have a second to talk about our lord and savior, Elon Musk?</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text></text>
+								</NegResponse>
+							</PosResponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>As an esteemed member of the community, I work as a outsourcer for a union of fellow academics, aimed at the dissemination of important knowledge and the containment of the sensitive and dangerous.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>You must be really respected.</text>
+								</PosResponse>
+									<text>Oh, that sounds marvelous! I do hope it's effective.</text>
+								<PosResponse>
+								</PosResponse>
+								<PosResponse>
+									<text>Ooooh secrets. Sounds fun.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>If these secrets were so important why would you tell me?</text>
+								</NegResponse>
+								<NegResponse>
+									<text>You aren't very good at your job if you're telling me about these secrets</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Sounds a bit like Big Brother to me.</text>
+								</NegResponse>
+							</NegResponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Philosophy</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Are you a supporter of enlightenment philosophers?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Voltaire and Locke are my jam.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>You mean those secular idealists? No thanks.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>A conjecture to ponder Should one come to the crossroads of life, would it be wiser to look back to experience or look ahead to possibility?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Hmmm. I would say a balance of both. Use your past to learn from your mistakes and your future to inspire you. </text>
+								</PosResponse>
+								<PosResponse>
+									<text>Always to the future. We must progress.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Woah, that's a little serious isn't it?</text>
+								</NegResponse>
+								<NegResponse>
+									<text>I'd focus on the present.</text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>You know, there exist others that share our ideas of progress through discussion and debate. I would know, as I have found them recently myself.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>I have heard rumors of such. Perhaps some rumors can be true.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Hah. Sure.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+			</Interests>
+	</Category>
+	<Category>
+		<Name>Politics</Name>
+			<Interests>
+				<Interest>
+					<Name>Anarchosyndicalist</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>So... Government, right?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Ughhh, it's so constricting, right? It's a bit oppressive on the workers of a nation.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Yeah. It's a thing.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>If you were stood at the gates of the afterlife, with what would you convince the guards to admit you to their ranks as you properly deserve?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>For one to have to convince the gatekeepers in the first place would imply an unworthiness to be there at all.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Errmmm, heavy?? Heavy and unprompted question?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>I'm part of an anarchosyndicalist commune. We take it in turns to act as a sort of executive officer for the week. But all the decision of that officer have to be ratified at a special biweekly meeting, by a simple majority in the case of purely internal affairs,  but by a two-thirds majority in the case of more pressing matters.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Seems sensible to me. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Bloody peasant!</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Libertarian</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Think it's true that you don't get freedom for free?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Oh, everyone deserves it, certainly, but there's definitely some work needed to maintain that status.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Nice Rush reference, I guess. Right?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>So. Crazy question. Do you think the gods would approve of our mayor?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>o long as they keep the best Interests of the public in mind, then everyone should approve of them.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>You're right: that is a crazy question.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>I just joined a libertarian organization aimed at changing the system and freeing the people from oppression. While important, it's also important that we ourselves form a grand family ourselves.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>That's a lovely sense of unity!</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>And I should care about your hive mind why?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Communism</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>So. Karl Marx, amirite?"</text>
+							<PosResponses>
+								<PosResponse>
+									<text>"I feel an uprising in my lower class at the thought of accessing your means of production."</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>'It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, but their regard to their own Interest.' I'm more of an Adam Smith fan.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>You know, it is said that when those of enough faith come together, it creates a power in and of itself. Could we conjure that power?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Should the stance of equality be true, then the answer is self-evident.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>I barely know you? And faith to what?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>My mentors within my commune of communism have always said to stay true but to stay open to others, for only then can we truly party.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>How insightful!</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Ahaha, communist party. What a jokester.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Monarchy</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>What is a king without his people?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>A king nonetheless, yet only in name</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Alone and probably sad?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>You know, I think if God had his way, society would be a lot clearer in its path.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Maybe a more clearly defined leader would help after all.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>That's...no? Separation of church and state?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>You know, in my organization, our hierarchical structure is very monarchical. The Grand King's family has been in charge for generations. The sense of tradition and structure is incredible and so comforting.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Huh. It's not very often that a structure like that can stick around on the smaller scale.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Sounds boring, is what it is. Change it up a bit</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+			</Interests>
+	</Category>
+	<Category>
+		<Name>Athletics</Name>
+			<Interests>
+				<Interest>
+					<Name>Sports_watching</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>So how 'bout them local sports teams?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>We're winning so many things. Scoring all the touchdowns and making all the runs. Goals too.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>We have a local team?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>You ready for the Pats to win another Super Bowl?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>AAaaaaaahhha lasjjasdljasdjoijalskj sfdj ojsdflkj lksdfa *flips car*</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Tell me when the Pats win the Puppy Bowl instead.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>If you want to see some sick bouldering you should check out La Sportiva's Legends Only.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Yeeeeeeesss. Shauna Coxsey, Mélissa Le Nevé, Petra Klingler all in one competition? Totally worth watching 3 hours straight.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Is it even rock climbing if they're climbing indoors?</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>Who’s the best athlete in history? I think it’s Tom Brady.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Go Pats!</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Ew, Pats?</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Uh, John Cena?</text>
+								</NegReseponse>
+								<NegResponse>
+									<text>Uh, the dude from Space Jam?</text>
+								</NegResponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>I've actually met some of the most famous athletes in the world! They were part of our quarterly speaker series within my commune, presenting to all the guys, gals, and enby pals of the family.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>sick nasty rad, mate!</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Sounds like a waste of their time, really.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Sports_playing</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>So. Sportsball?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Love it. Beat my PR last night, actually!</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Nahhh</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>I'm part of this group that goes curling every Tuesday. You should join us sometime.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Totally. I'd love to try a new sport and meet some new people.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>You mean the "sport" where they roll rocks on ice and sweep brooms? No thanks.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+						<CultHint>
+							<text>Do you think you could win in a cage match with a god?</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>y'know bro, I ain't never had sicker gains since the soft lights of the Total Gym began to spot my reps.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>gnarly brah</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>What even is that supposed to mean.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Exercise</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>You ever try the One-Punch Man workout? 100 push-ups, 100 sit-ups, 100 squats, and a 10k. EVERY. DAY. Works wonders.</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>How many Bibles you think you could bench press?</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>Running drills at the gym is one thing, but running drills to lead the community to betterment is much more fulfilling.</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+			</Interests>
+	</Category>
+	<Category>
+		<Name>Health_Lifestyle</Name>
+			<Interests>
+				<Interest>
+					<Name>Diet</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>If the blood of Christ were a coffee, how many shots of espresso would be in it?</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interests>
+				<Interest>
+					<Name>Environmentalism</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Have you heard that France is planning on shutting down all coal fired power plants by 2021? Pretty cool, huh.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Yes!! Another step towards saving the planet!</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>But jobs.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>Pretty bummed about that solar panel tariff. Is there any hope for our country?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>With all the momentum of the environmentalist movement, there's no stopping us now! Don't lose hope!</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>I dunno. Don't we want to support local industry?"</text>
+								</NegReseponse>
+								<NegReseponses>
+								<NegReseponse>
+									<text>But jobs.</text>
+								</NegReseponse>
+							</NegReseponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>No need to be overdramatic.</text>
+								</NegReseponse>
+							</NegReseponses>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>Do you believe that the wind carries messages from the heavens?</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Miracle_Pills</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>One can shed the weight of fat with ease, but do you know the best way to shed the weight of sin?</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+			</Interests>
+	</Category>
+	
+	<Category>
+		<Name>Entertainment</Name>
+			<Interests>
+				<Interest>
+					<Name>Music</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>If you're into polyrhythms you should check out the Icelandic band Asgeir.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Duuuuuuude. Polyrhythms are sick. I'll totally check them out.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>I got to see Asgeir in concert! So amazing. If you're looking for other Scandinavian bands Kings of Convenience are good too.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Umm.. Poly-what? I'm not really into multiple partners...</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Polyrhythms kinda mess with my head. I can't do two time signatures at once.</text>
+								</NegResponse>
+							</NegResponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>So do you have a favorite band?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Elvis Depressedly. Lookem up. They're pretty cool.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>The Kooks are pretty good.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Not really. I mostly listen to NPR.</text>
+								</NegResponse>
+								<NegResponse>
+									<text>I don't like picking favorites. Not because I like them all equally. Because I hate them all equally.</text>
+								</NegResponse>
+							</NegResponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>What do you think about gospel and hymns? While not my favorite music, it has a certain connection to it that’s really moving. Do you feel it?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>The Spirit moves me when I hear that holy music.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>I don't always understand them, but they always bring me piece.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>I prefer something a little more recent.</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Not really my genre.</text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+						<CultHint>
+							<text>What are your thoughts on chanting around a bonfire at midnight during the summer solstice?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Get's to my primal side.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>How else do you celebrate the summer solstice?</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Uhhh... what?</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Um. No. No chanting. Or bonfires.</text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>Is there anyone who really understands the true sense of enlightenment than the Priests of the Temples of Syrinx?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Entertainment Music Cult Mention 1 Pos 1</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Entertainment Music Cult Mention 1 Pos 2</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Entertainment Music Cult Mention 1 Neg 1</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Entertainment Music Cult Mention 1 Neg 2</text>
+								</NegResponse>
+							</NegResponses>
+						</CultMention>
+						<CultMention>
+							<text>Entertainment Music Cult Mention 2</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Entertainment Music Cult Mention 2 Pos 1</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Entertainment Music Cult Mention 2 Pos 2</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Entertainment Music Cult Mention 2 Neg 1</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Entertainment Music Cult Mention 2 Neg 2</text>
+								</NegResponse>
+							</NegResponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Movies</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Did you hear about that Bollywood movie, Padmaavat? Apparently it sparked a bunch of protests. Supposed to be a good movie though.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Yeah, it was all over the news. Apparently someone offered a bounty for beheading the main actress? But on the bright side, the music was good.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>Favorite Marvel film. Go.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Wonder Woman. Hands down.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Hear me out. Ant-man. Paul Rudd is fantastic.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>I don't really watch movies. I'd rather do something productive</text>
+								</NegReseponse>
+								<NegReseponse>
+									<text>Not really into action films. I prefer something with meaning.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>My favorite movie? Children of the Corn. Such a strong message. Yours? </text>
+							<PosResponses>
+								<PosResponse>
+									<text>The Village. The twist at the end is amazing.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>Nice choice. Big fan of Stephen King. I liked It.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>Isn't that the one where the kids murder everyone?</text>
+								</NegResponse>
+								<NegResponse>
+									<text>Uhh, I'm not a fan of bloody movies.</text>
+								</NegResponse>
+							</NegResponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interests>
+				<Interest>
+					<Name>Art</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Did you check out the Murakami exhibit at the MFA? Really neat combo of eccentric and traditional.</text>
+							<PosResponses>
+								<PosResponse>
+									<text>It was super cool! You should go back and listen to the soundtrack of Paprika while viewing the art. Really pairs well together.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text>It was a bit too out there for me.</text>
+								</NegReseponse>
+								<NegReseponse>
+									<text>Ugh museums aren't my thing. You walk around for hours and have to be quiet the whole time.</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text>If art is the reflection of the soul, then what does yours show? Are you really on the right path? </text>
+							<PosResponses>
+								<PosResponse>
+									<text>I'm not sure if I'm on the right path, but I'll follow if you show me the way.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>positive text goes here</text>
+								</PosResponse>
+							</PosResponses>
+							<NegResponses>
+								<NegResponse>
+									<text>I think my actions speak louder than your art.</text>
+								</NegResponse>
+								<NegResponse>
+									<text>That's a little intense.</text>
+								</NegResponse>
+							</NegResponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+				<Interest>
+					<Name>Literature</Name>
+					<SmallTalks>
+						<SmallTalk>
+							<text>Non-fiction or fiction?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>Non-fiction. There's so much to learn about this world, why explore fictional ones?</text>
+								</PosResponse>
+							</PosResponses>
+							<PosResponse>
+									<text>Fiction. The stories and adventures are so much more exciting than real-life.</text>
+								</PosResponse>
+							<NegReseponses>
+								<NegReseponse>
+									<text>Ummm. Shampoo bottles? I don't really read very much...</text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+						<SmallTalk>
+							<text>I've been reading a lot of Neil Gaiman's work recently. Any authors you're a fan of?</text>
+							<PosResponses>
+								<PosResponse>
+									<text>I've been going back to classic sci-fi. Isaac Asimov, Frank Herbert, that kinda stuff.</text>
+								</PosResponse>
+								<PosResponse>
+									<text>OK, bit of a guilty pleasure, but Nicholas Sparks. Makes me cry and swoon every time.</text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</SmallTalk>
+					</SmallTalks>
+					<CultHints>
+						<CultHint>
+							<text>I think H. P. Lovecraft had the right idea with the Church of Starry Wisdom. The Esoteric Order of Dagon, mm, I appreciate the effort, but it fell a bit short.</text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultHint>
+					</CultHints>
+					<CultMentions>
+						<CultMention>
+							<text></text>
+							<PosResponses>
+								<PosResponse>
+									<text></text>
+								</PosResponse>
+							</PosResponses>
+							<NegReseponses>
+								<NegReseponse>
+									<text></text>
+								</NegReseponse>
+							</NegReseponses>
+						</CultMention>
+					</CultMentions>
+				</Interest>
+			</Interests>
+	</Category>
+</Categories>
+
+
+
+
+						
+						
+						
+						

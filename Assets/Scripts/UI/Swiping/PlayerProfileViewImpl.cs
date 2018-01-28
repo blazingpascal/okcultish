@@ -23,7 +23,7 @@ public class PlayerProfileViewImpl : MonoBehaviour
 		Sprite sprite = profile.Image;
 		if(sprite == null)
 		{
-            string gender = user.Gender == Gender.Female ? "male" : "female";
+            string gender = user.Gender == Gender.Female ? "female" : "male";
             string path = String.Format(@"images/profile_images/{0}_portraits/", gender);
             string filename = String.Format("default_{0}", gender);
             sprite = Resources.Load<Sprite>(path + filename);

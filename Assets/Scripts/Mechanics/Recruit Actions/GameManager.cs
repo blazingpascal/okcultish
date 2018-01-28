@@ -37,16 +37,22 @@ public class GameManager : MonoBehaviour, IGameManager
 		switch (gameState)
 		{
 			case GameState.Swiping:
-				SceneManager.LoadScene(0);
-				break;
-			case GameState.Recruiting:
 				SceneManager.LoadScene(1);
 				break;
-			case GameState.Losing:
+			case GameState.Recruiting:
 				SceneManager.LoadScene(2);
 				break;
-			case GameState.Awarded:
+			case GameState.Losing:
 				SceneManager.LoadScene(3);
+				break;
+			case GameState.Awarded:
+				SceneManager.LoadScene(4);
+				break;
+			case GameState.CreatingProfile:
+				SceneManager.LoadScene(6);
+				break;
+			case GameState.Title:
+				SceneManager.LoadScene(0);
 				break;
 			default:
 				break;

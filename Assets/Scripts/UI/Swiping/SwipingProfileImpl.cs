@@ -15,11 +15,6 @@ public class SwipingProfileImpl : MonoBehaviour
 	public void Awake()
 	{
 		manager = FindObjectOfType<GameManager>();
-		if (manager == null)
-		{
-			SceneManager.LoadScene(4, LoadSceneMode.Additive);
-			
-		}
 
 	}
 
